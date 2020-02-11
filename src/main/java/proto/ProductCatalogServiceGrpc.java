@@ -120,6 +120,37 @@ public final class ProductCatalogServiceGrpc {
     return getSearchProductsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<proto.Demo.BuyProductRequest,
+      proto.Demo.BuyProductResponse> getBuyProductMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BuyProduct",
+      requestType = proto.Demo.BuyProductRequest.class,
+      responseType = proto.Demo.BuyProductResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<proto.Demo.BuyProductRequest,
+      proto.Demo.BuyProductResponse> getBuyProductMethod() {
+    io.grpc.MethodDescriptor<proto.Demo.BuyProductRequest, proto.Demo.BuyProductResponse> getBuyProductMethod;
+    if ((getBuyProductMethod = ProductCatalogServiceGrpc.getBuyProductMethod) == null) {
+      synchronized (ProductCatalogServiceGrpc.class) {
+        if ((getBuyProductMethod = ProductCatalogServiceGrpc.getBuyProductMethod) == null) {
+          ProductCatalogServiceGrpc.getBuyProductMethod = getBuyProductMethod =
+              io.grpc.MethodDescriptor.<proto.Demo.BuyProductRequest, proto.Demo.BuyProductResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BuyProduct"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.Demo.BuyProductRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  proto.Demo.BuyProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductCatalogServiceMethodDescriptorSupplier("BuyProduct"))
+              .build();
+        }
+      }
+    }
+    return getBuyProductMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -189,6 +220,13 @@ public final class ProductCatalogServiceGrpc {
       asyncUnimplementedUnaryCall(getSearchProductsMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void buyProduct(proto.Demo.BuyProductRequest request,
+        io.grpc.stub.StreamObserver<proto.Demo.BuyProductResponse> responseObserver) {
+      asyncUnimplementedUnaryCall(getBuyProductMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -212,6 +250,13 @@ public final class ProductCatalogServiceGrpc {
                 proto.Demo.SearchProductsRequest,
                 proto.Demo.SearchProductsResponse>(
                   this, METHODID_SEARCH_PRODUCTS)))
+          .addMethod(
+            getBuyProductMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                proto.Demo.BuyProductRequest,
+                proto.Demo.BuyProductResponse>(
+                  this, METHODID_BUY_PRODUCT)))
           .build();
     }
   }
@@ -253,6 +298,14 @@ public final class ProductCatalogServiceGrpc {
       asyncUnaryCall(
           getChannel().newCall(getSearchProductsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void buyProduct(proto.Demo.BuyProductRequest request,
+        io.grpc.stub.StreamObserver<proto.Demo.BuyProductResponse> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getBuyProductMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -288,6 +341,13 @@ public final class ProductCatalogServiceGrpc {
     public proto.Demo.SearchProductsResponse searchProducts(proto.Demo.SearchProductsRequest request) {
       return blockingUnaryCall(
           getChannel(), getSearchProductsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public proto.Demo.BuyProductResponse buyProduct(proto.Demo.BuyProductRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getBuyProductMethod(), getCallOptions(), request);
     }
   }
 
@@ -328,11 +388,20 @@ public final class ProductCatalogServiceGrpc {
       return futureUnaryCall(
           getChannel().newCall(getSearchProductsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<proto.Demo.BuyProductResponse> buyProduct(
+        proto.Demo.BuyProductRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getBuyProductMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_PRODUCTS = 0;
   private static final int METHODID_GET_PRODUCT = 1;
   private static final int METHODID_SEARCH_PRODUCTS = 2;
+  private static final int METHODID_BUY_PRODUCT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -362,6 +431,10 @@ public final class ProductCatalogServiceGrpc {
         case METHODID_SEARCH_PRODUCTS:
           serviceImpl.searchProducts((proto.Demo.SearchProductsRequest) request,
               (io.grpc.stub.StreamObserver<proto.Demo.SearchProductsResponse>) responseObserver);
+          break;
+        case METHODID_BUY_PRODUCT:
+          serviceImpl.buyProduct((proto.Demo.BuyProductRequest) request,
+              (io.grpc.stub.StreamObserver<proto.Demo.BuyProductResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -427,6 +500,7 @@ public final class ProductCatalogServiceGrpc {
               .addMethod(getListProductsMethod())
               .addMethod(getGetProductMethod())
               .addMethod(getSearchProductsMethod())
+              .addMethod(getBuyProductMethod())
               .build();
         }
       }

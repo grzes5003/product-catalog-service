@@ -12,7 +12,15 @@ message Product {
     string picture = 4;
     int32 price = 5;
 
-    repeated string tags = 6;
+    int32 availableItems = 6;
+    int32 reservedItems = 7;
+
+    repeated string tags = 8;
+}
+
+message ClientInfo {
+    string address = 1;
+    string paymentClientID = 2;
 }
 
 message ListProductsResponse {
@@ -35,8 +43,18 @@ message GetProductResponse {
     Product product = 1;
 }
 
+message BuyProductRequest {
+    string id = 1;
+    ClientInfo clientInfo = 2;
+}
+
+message BuyProductResponse {
+    bool status = 1;
+}
+
 service ProductCatalogService {
     rpc ListProducts(Empty) returns (ListProductsResponse) {}
     rpc GetProduct(GetProductRequest) returns (GetProductResponse) {}
     rpc SearchProducts(SearchProductsRequest) returns (SearchProductsResponse) {}
+    rpc BuyProduct(BuyProductRequest) returns (BuyProductResponse) {}
 }
