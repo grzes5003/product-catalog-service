@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option java_package = "proto";
+option java_generic_services = true;
+
+message Empty {}
+
+message Product {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    string picture = 4;
+    int32 price = 5;
+
+    repeated string tags = 6;
+}
+
+message ListProductsResponse {
+    repeated Product products = 1;
+}
+
+message GetProductRequest {
+    string id = 1;
+}
+
+message SearchProductsRequest {
+    string query = 1;
+}
+
+message SearchProductsResponse {
+    repeated Product results = 1;
+}
+
+message GetProductResponse {
+    Product product = 1;
+}
+
+service ProductCatalogService {
+    rpc ListProducts(Empty) returns (ListProductsResponse) {}
+    rpc GetProduct(GetProductRequest) returns (GetProductResponse) {}
+    rpc SearchProducts(SearchProductsRequest) returns (SearchProductsResponse) {}
+}
