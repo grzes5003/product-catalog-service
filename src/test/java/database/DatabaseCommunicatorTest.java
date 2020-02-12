@@ -1,5 +1,6 @@
 package database;
 
+import data.ProductOperationOutOfRange;
 import org.junit.jupiter.api.*;
 import proto.Demo;
 
@@ -34,8 +35,29 @@ class DatabaseCommunicatorTest {
                 .newBuilder()
                 .setQuery("costam")
                 .build();
-        assertEquals(databaseCommunicator.getSearchProduct(searchProductsRequest1).getId(), "123456");
-        assertNull(databaseCommunicator.getSearchProduct(searchProductsRequest2));
+        assertEquals(databaseCommunicator.getSearchProduct(searchProductsRequest1).get(0).getId(), "123456");
+        assertNull(databaseCommunicator.getSearchProduct(searchProductsRequest2).get(0));
 
+    }
+
+    @DisplayName("getNumOfAvailavleItemsTest")
+    @Test
+    void getNumOfAvailavleItemsTest() throws SQLException {
+        int id = 123456;
+        int availavleItems =  databaseCommunicator.getNumOfAvailavleItems(id);
+        int reservedItems = databaseCommunicator.getNumOfReservedItems(id);
+        databaseCommunicator.markItemAsReserved(id, 1);
+        assertEquals(availavleItems-1, databaseCommunicator.getNumOfAvailavleItems(id));
+        assertEquals(reservedItems+1, databaseCommunicator.getNumOfReservedItems(id));
+        databaseCommunicator.markItemAsAvailable(id, 1);
+        assertEquals(availavleItems, databaseCommunicator.getNumOfAvailavleItems(id));
+    }
+
+    @DisplayName("addUnitsOfProductTest")
+    @Test
+    void addUnitsOfProductTest() throws SQLException {
+        int availavleItems =  databaseCommunicator.getNumOfAvailavleItems(123456);
+        assertThrows(ProductOperationOutOfRange.class, () -> databaseCommunicator.addUnitsOfProduct(123456, -1));
+        assertEquals(availavleItems, databaseCommunicator.getNumOfAvailavleItems(123456));
     }
 }

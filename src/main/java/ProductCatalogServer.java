@@ -9,6 +9,7 @@ import proto.ProductCatalogServiceGrpc;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Collection;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -101,7 +102,18 @@ public class ProductCatalogServer {
 
         @Override
         public void searchProducts(Demo.SearchProductsRequest request, StreamObserver<Demo.SearchProductsResponse> responseObserver) {
-            super.searchProducts(request, responseObserver);
+            //super.searchProducts(request, responseObserver);
+            try {
+                List<Demo.Product> productList = databaseCommunicator.getSearchProduct(request);
+                Demo.SearchProductsResponse searchProductsResponse = Demo.SearchProductsResponse
+                        .newBuilder()
+                        .addAllResults(productList)
+                        .build();
+                responseObserver.onNext(searchProductsResponse);
+                responseObserver.onCompleted();
+            } catch (SQLException e) {
+                logger.info(e.toString());
+            }
         }
     }
 }
