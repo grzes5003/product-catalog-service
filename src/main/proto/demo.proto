@@ -5,6 +5,8 @@ option java_generic_services = true;
 
 message Empty {}
 
+// Product catalog
+
 message Product {
     string id = 1;
     string name = 2;
@@ -52,9 +54,43 @@ message BuyProductResponse {
     bool status = 1;
 }
 
+
+// Cart
+
+message CartItem {
+    string product_id = 1;
+    int32  quantity = 2;
+}
+
+message AddItemRequest {
+    string user_id = 1;
+    CartItem item = 2;
+}
+
+message EmptyCartRequest {
+    string user_id = 1;
+}
+
+message GetCartRequest {
+    string user_id = 1;
+}
+
+message Cart {
+    string user_id = 1;
+    repeated CartItem items = 2;
+}
+
+// Services
+
 service ProductCatalogService {
     rpc ListProducts(Empty) returns (ListProductsResponse) {}
     rpc GetProduct(GetProductRequest) returns (GetProductResponse) {}
     rpc SearchProducts(SearchProductsRequest) returns (SearchProductsResponse) {}
     rpc BuyProduct(BuyProductRequest) returns (BuyProductResponse) {}
+}
+
+service CartService {
+    rpc AddItem(AddItemRequest) returns (Empty) {}
+    rpc GetCart(GetCartRequest) returns (Cart) {}
+    rpc EmptyCart(EmptyCartRequest) returns (Empty) {}
 }
