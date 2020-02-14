@@ -10627,6 +10627,10818 @@ public final class Demo {
 
   }
 
+  public interface GetQuoteRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetQuoteRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.Address address = 1;</code>
+     * @return The address.
+     */
+    proto.Demo.Address getAddress();
+    /**
+     * <code>.Address address = 1;</code>
+     */
+    proto.Demo.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    java.util.List<proto.Demo.CartItem> 
+        getItemsList();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    proto.Demo.CartItem getItems(int index);
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    int getItemsCount();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+        getItemsOrBuilderList();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code GetQuoteRequest}
+   */
+  public  static final class GetQuoteRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetQuoteRequest)
+      GetQuoteRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetQuoteRequest.newBuilder() to construct.
+    private GetQuoteRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetQuoteRequest() {
+      items_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetQuoteRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetQuoteRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              proto.Demo.Address.Builder subBuilder = null;
+              if (address_ != null) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(proto.Demo.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                items_ = new java.util.ArrayList<proto.Demo.CartItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              items_.add(
+                  input.readMessage(proto.Demo.CartItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_GetQuoteRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_GetQuoteRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.GetQuoteRequest.class, proto.Demo.GetQuoteRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private proto.Demo.Address address_;
+    /**
+     * <code>.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return address_ != null;
+    }
+    /**
+     * <code>.Address address = 1;</code>
+     * @return The address.
+     */
+    public proto.Demo.Address getAddress() {
+      return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.Address address = 1;</code>
+     */
+    public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+      return getAddress();
+    }
+
+    public static final int ITEMS_FIELD_NUMBER = 2;
+    private java.util.List<proto.Demo.CartItem> items_;
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public java.util.List<proto.Demo.CartItem> getItemsList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+        getItemsOrBuilderList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public int getItemsCount() {
+      return items_.size();
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public proto.Demo.CartItem getItems(int index) {
+      return items_.get(index);
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+        int index) {
+      return items_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (address_ != null) {
+        output.writeMessage(1, getAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        output.writeMessage(2, items_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (address_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, items_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.GetQuoteRequest)) {
+        return super.equals(obj);
+      }
+      proto.Demo.GetQuoteRequest other = (proto.Demo.GetQuoteRequest) obj;
+
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
+      }
+      if (!getItemsList()
+          .equals(other.getItemsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      if (getItemsCount() > 0) {
+        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+        hash = (53 * hash) + getItemsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.GetQuoteRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetQuoteRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetQuoteRequest)
+        proto.Demo.GetQuoteRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_GetQuoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_GetQuoteRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.GetQuoteRequest.class, proto.Demo.GetQuoteRequest.Builder.class);
+      }
+
+      // Construct using proto.Demo.GetQuoteRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getItemsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (addressBuilder_ == null) {
+          address_ = null;
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_GetQuoteRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteRequest getDefaultInstanceForType() {
+        return proto.Demo.GetQuoteRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteRequest build() {
+        proto.Demo.GetQuoteRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteRequest buildPartial() {
+        proto.Demo.GetQuoteRequest result = new proto.Demo.GetQuoteRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        if (itemsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            items_ = java.util.Collections.unmodifiableList(items_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.items_ = items_;
+        } else {
+          result.items_ = itemsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.GetQuoteRequest) {
+          return mergeFrom((proto.Demo.GetQuoteRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.GetQuoteRequest other) {
+        if (other == proto.Demo.GetQuoteRequest.getDefaultInstance()) return this;
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (itemsBuilder_ == null) {
+          if (!other.items_.isEmpty()) {
+            if (items_.isEmpty()) {
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureItemsIsMutable();
+              items_.addAll(other.items_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.items_.isEmpty()) {
+            if (itemsBuilder_.isEmpty()) {
+              itemsBuilder_.dispose();
+              itemsBuilder_ = null;
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              itemsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getItemsFieldBuilder() : null;
+            } else {
+              itemsBuilder_.addAllMessages(other.items_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.GetQuoteRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.GetQuoteRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private proto.Demo.Address address_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>.Address address = 1;</code>
+       * @return Whether the address field is set.
+       */
+      public boolean hasAddress() {
+        return addressBuilder_ != null || address_ != null;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       * @return The address.
+       */
+      public proto.Demo.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder setAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder setAddress(
+          proto.Demo.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder mergeAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (address_ != null) {
+            address_ =
+              proto.Demo.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = null;
+          onChanged();
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public proto.Demo.Address.Builder getAddressBuilder() {
+        
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_ == null ?
+              proto.Demo.Address.getDefaultInstance() : address_;
+        }
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private java.util.List<proto.Demo.CartItem> items_ =
+        java.util.Collections.emptyList();
+      private void ensureItemsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          items_ = new java.util.ArrayList<proto.Demo.CartItem>(items_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> itemsBuilder_;
+
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<proto.Demo.CartItem> getItemsList() {
+        if (itemsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(items_);
+        } else {
+          return itemsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public int getItemsCount() {
+        if (itemsBuilder_ == null) {
+          return items_.size();
+        } else {
+          return itemsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem getItems(int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);
+        } else {
+          return itemsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.set(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addAllItems(
+          java.lang.Iterable<? extends proto.Demo.CartItem> values) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
+          onChanged();
+        } else {
+          itemsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder clearItems() {
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder removeItems(int index) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.remove(index);
+          onChanged();
+        } else {
+          itemsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder getItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+          int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);  } else {
+          return itemsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+           getItemsOrBuilderList() {
+        if (itemsBuilder_ != null) {
+          return itemsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(items_);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder addItemsBuilder() {
+        return getItemsFieldBuilder().addBuilder(
+            proto.Demo.CartItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder addItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().addBuilder(
+            index, proto.Demo.CartItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<proto.Demo.CartItem.Builder> 
+           getItemsBuilderList() {
+        return getItemsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> 
+          getItemsFieldBuilder() {
+        if (itemsBuilder_ == null) {
+          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder>(
+                  items_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          items_ = null;
+        }
+        return itemsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetQuoteRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetQuoteRequest)
+    private static final proto.Demo.GetQuoteRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.GetQuoteRequest();
+    }
+
+    public static proto.Demo.GetQuoteRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetQuoteRequest>
+        PARSER = new com.google.protobuf.AbstractParser<GetQuoteRequest>() {
+      @java.lang.Override
+      public GetQuoteRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetQuoteRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetQuoteRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetQuoteRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.GetQuoteRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetQuoteResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:GetQuoteResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 cost_usd = 1;</code>
+     * @return The costUsd.
+     */
+    int getCostUsd();
+  }
+  /**
+   * Protobuf type {@code GetQuoteResponse}
+   */
+  public  static final class GetQuoteResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:GetQuoteResponse)
+      GetQuoteResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetQuoteResponse.newBuilder() to construct.
+    private GetQuoteResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetQuoteResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetQuoteResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetQuoteResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              costUsd_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_GetQuoteResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_GetQuoteResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.GetQuoteResponse.class, proto.Demo.GetQuoteResponse.Builder.class);
+    }
+
+    public static final int COST_USD_FIELD_NUMBER = 1;
+    private int costUsd_;
+    /**
+     * <code>int32 cost_usd = 1;</code>
+     * @return The costUsd.
+     */
+    public int getCostUsd() {
+      return costUsd_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (costUsd_ != 0) {
+        output.writeInt32(1, costUsd_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (costUsd_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, costUsd_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.GetQuoteResponse)) {
+        return super.equals(obj);
+      }
+      proto.Demo.GetQuoteResponse other = (proto.Demo.GetQuoteResponse) obj;
+
+      if (getCostUsd()
+          != other.getCostUsd()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + COST_USD_FIELD_NUMBER;
+      hash = (53 * hash) + getCostUsd();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.GetQuoteResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.GetQuoteResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code GetQuoteResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:GetQuoteResponse)
+        proto.Demo.GetQuoteResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_GetQuoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_GetQuoteResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.GetQuoteResponse.class, proto.Demo.GetQuoteResponse.Builder.class);
+      }
+
+      // Construct using proto.Demo.GetQuoteResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        costUsd_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_GetQuoteResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteResponse getDefaultInstanceForType() {
+        return proto.Demo.GetQuoteResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteResponse build() {
+        proto.Demo.GetQuoteResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.GetQuoteResponse buildPartial() {
+        proto.Demo.GetQuoteResponse result = new proto.Demo.GetQuoteResponse(this);
+        result.costUsd_ = costUsd_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.GetQuoteResponse) {
+          return mergeFrom((proto.Demo.GetQuoteResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.GetQuoteResponse other) {
+        if (other == proto.Demo.GetQuoteResponse.getDefaultInstance()) return this;
+        if (other.getCostUsd() != 0) {
+          setCostUsd(other.getCostUsd());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.GetQuoteResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.GetQuoteResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int costUsd_ ;
+      /**
+       * <code>int32 cost_usd = 1;</code>
+       * @return The costUsd.
+       */
+      public int getCostUsd() {
+        return costUsd_;
+      }
+      /**
+       * <code>int32 cost_usd = 1;</code>
+       * @param value The costUsd to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCostUsd(int value) {
+        
+        costUsd_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 cost_usd = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCostUsd() {
+        
+        costUsd_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:GetQuoteResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:GetQuoteResponse)
+    private static final proto.Demo.GetQuoteResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.GetQuoteResponse();
+    }
+
+    public static proto.Demo.GetQuoteResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetQuoteResponse>
+        PARSER = new com.google.protobuf.AbstractParser<GetQuoteResponse>() {
+      @java.lang.Override
+      public GetQuoteResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetQuoteResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetQuoteResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetQuoteResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.GetQuoteResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShipOrderRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ShipOrderRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.Address address = 1;</code>
+     * @return The address.
+     */
+    proto.Demo.Address getAddress();
+    /**
+     * <code>.Address address = 1;</code>
+     */
+    proto.Demo.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    java.util.List<proto.Demo.CartItem> 
+        getItemsList();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    proto.Demo.CartItem getItems(int index);
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    int getItemsCount();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+        getItemsOrBuilderList();
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ShipOrderRequest}
+   */
+  public  static final class ShipOrderRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ShipOrderRequest)
+      ShipOrderRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShipOrderRequest.newBuilder() to construct.
+    private ShipOrderRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShipOrderRequest() {
+      items_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShipOrderRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShipOrderRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              proto.Demo.Address.Builder subBuilder = null;
+              if (address_ != null) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(proto.Demo.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                items_ = new java.util.ArrayList<proto.Demo.CartItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              items_.add(
+                  input.readMessage(proto.Demo.CartItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_ShipOrderRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_ShipOrderRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.ShipOrderRequest.class, proto.Demo.ShipOrderRequest.Builder.class);
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 1;
+    private proto.Demo.Address address_;
+    /**
+     * <code>.Address address = 1;</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return address_ != null;
+    }
+    /**
+     * <code>.Address address = 1;</code>
+     * @return The address.
+     */
+    public proto.Demo.Address getAddress() {
+      return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.Address address = 1;</code>
+     */
+    public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+      return getAddress();
+    }
+
+    public static final int ITEMS_FIELD_NUMBER = 2;
+    private java.util.List<proto.Demo.CartItem> items_;
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public java.util.List<proto.Demo.CartItem> getItemsList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+        getItemsOrBuilderList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public int getItemsCount() {
+      return items_.size();
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public proto.Demo.CartItem getItems(int index) {
+      return items_.get(index);
+    }
+    /**
+     * <code>repeated .CartItem items = 2;</code>
+     */
+    public proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+        int index) {
+      return items_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (address_ != null) {
+        output.writeMessage(1, getAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        output.writeMessage(2, items_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (address_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, items_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.ShipOrderRequest)) {
+        return super.equals(obj);
+      }
+      proto.Demo.ShipOrderRequest other = (proto.Demo.ShipOrderRequest) obj;
+
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
+      }
+      if (!getItemsList()
+          .equals(other.getItemsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      if (getItemsCount() > 0) {
+        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+        hash = (53 * hash) + getItemsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.ShipOrderRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ShipOrderRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ShipOrderRequest)
+        proto.Demo.ShipOrderRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_ShipOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_ShipOrderRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.ShipOrderRequest.class, proto.Demo.ShipOrderRequest.Builder.class);
+      }
+
+      // Construct using proto.Demo.ShipOrderRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getItemsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (addressBuilder_ == null) {
+          address_ = null;
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_ShipOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderRequest getDefaultInstanceForType() {
+        return proto.Demo.ShipOrderRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderRequest build() {
+        proto.Demo.ShipOrderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderRequest buildPartial() {
+        proto.Demo.ShipOrderRequest result = new proto.Demo.ShipOrderRequest(this);
+        int from_bitField0_ = bitField0_;
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        if (itemsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            items_ = java.util.Collections.unmodifiableList(items_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.items_ = items_;
+        } else {
+          result.items_ = itemsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.ShipOrderRequest) {
+          return mergeFrom((proto.Demo.ShipOrderRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.ShipOrderRequest other) {
+        if (other == proto.Demo.ShipOrderRequest.getDefaultInstance()) return this;
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (itemsBuilder_ == null) {
+          if (!other.items_.isEmpty()) {
+            if (items_.isEmpty()) {
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureItemsIsMutable();
+              items_.addAll(other.items_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.items_.isEmpty()) {
+            if (itemsBuilder_.isEmpty()) {
+              itemsBuilder_.dispose();
+              itemsBuilder_ = null;
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              itemsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getItemsFieldBuilder() : null;
+            } else {
+              itemsBuilder_.addAllMessages(other.items_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.ShipOrderRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.ShipOrderRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private proto.Demo.Address address_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>.Address address = 1;</code>
+       * @return Whether the address field is set.
+       */
+      public boolean hasAddress() {
+        return addressBuilder_ != null || address_ != null;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       * @return The address.
+       */
+      public proto.Demo.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder setAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder setAddress(
+          proto.Demo.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder mergeAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (address_ != null) {
+            address_ =
+              proto.Demo.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = null;
+          onChanged();
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public proto.Demo.Address.Builder getAddressBuilder() {
+        
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_ == null ?
+              proto.Demo.Address.getDefaultInstance() : address_;
+        }
+      }
+      /**
+       * <code>.Address address = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private java.util.List<proto.Demo.CartItem> items_ =
+        java.util.Collections.emptyList();
+      private void ensureItemsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          items_ = new java.util.ArrayList<proto.Demo.CartItem>(items_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> itemsBuilder_;
+
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<proto.Demo.CartItem> getItemsList() {
+        if (itemsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(items_);
+        } else {
+          return itemsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public int getItemsCount() {
+        if (itemsBuilder_ == null) {
+          return items_.size();
+        } else {
+          return itemsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem getItems(int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);
+        } else {
+          return itemsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.set(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.CartItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.CartItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder addAllItems(
+          java.lang.Iterable<? extends proto.Demo.CartItem> values) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
+          onChanged();
+        } else {
+          itemsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder clearItems() {
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public Builder removeItems(int index) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.remove(index);
+          onChanged();
+        } else {
+          itemsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder getItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItemOrBuilder getItemsOrBuilder(
+          int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);  } else {
+          return itemsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<? extends proto.Demo.CartItemOrBuilder> 
+           getItemsOrBuilderList() {
+        if (itemsBuilder_ != null) {
+          return itemsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(items_);
+        }
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder addItemsBuilder() {
+        return getItemsFieldBuilder().addBuilder(
+            proto.Demo.CartItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public proto.Demo.CartItem.Builder addItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().addBuilder(
+            index, proto.Demo.CartItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CartItem items = 2;</code>
+       */
+      public java.util.List<proto.Demo.CartItem.Builder> 
+           getItemsBuilderList() {
+        return getItemsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> 
+          getItemsFieldBuilder() {
+        if (itemsBuilder_ == null) {
+          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder>(
+                  items_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          items_ = null;
+        }
+        return itemsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ShipOrderRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ShipOrderRequest)
+    private static final proto.Demo.ShipOrderRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.ShipOrderRequest();
+    }
+
+    public static proto.Demo.ShipOrderRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShipOrderRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ShipOrderRequest>() {
+      @java.lang.Override
+      public ShipOrderRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShipOrderRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShipOrderRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShipOrderRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.ShipOrderRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ShipOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ShipOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string tracking_id = 1;</code>
+     * @return The trackingId.
+     */
+    java.lang.String getTrackingId();
+    /**
+     * <code>string tracking_id = 1;</code>
+     * @return The bytes for trackingId.
+     */
+    com.google.protobuf.ByteString
+        getTrackingIdBytes();
+  }
+  /**
+   * Protobuf type {@code ShipOrderResponse}
+   */
+  public  static final class ShipOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ShipOrderResponse)
+      ShipOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ShipOrderResponse.newBuilder() to construct.
+    private ShipOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ShipOrderResponse() {
+      trackingId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ShipOrderResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ShipOrderResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              trackingId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_ShipOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_ShipOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.ShipOrderResponse.class, proto.Demo.ShipOrderResponse.Builder.class);
+    }
+
+    public static final int TRACKING_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object trackingId_;
+    /**
+     * <code>string tracking_id = 1;</code>
+     * @return The trackingId.
+     */
+    public java.lang.String getTrackingId() {
+      java.lang.Object ref = trackingId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        trackingId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string tracking_id = 1;</code>
+     * @return The bytes for trackingId.
+     */
+    public com.google.protobuf.ByteString
+        getTrackingIdBytes() {
+      java.lang.Object ref = trackingId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        trackingId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTrackingIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, trackingId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTrackingIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, trackingId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.ShipOrderResponse)) {
+        return super.equals(obj);
+      }
+      proto.Demo.ShipOrderResponse other = (proto.Demo.ShipOrderResponse) obj;
+
+      if (!getTrackingId()
+          .equals(other.getTrackingId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRACKING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTrackingId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ShipOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.ShipOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ShipOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ShipOrderResponse)
+        proto.Demo.ShipOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_ShipOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_ShipOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.ShipOrderResponse.class, proto.Demo.ShipOrderResponse.Builder.class);
+      }
+
+      // Construct using proto.Demo.ShipOrderResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        trackingId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_ShipOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderResponse getDefaultInstanceForType() {
+        return proto.Demo.ShipOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderResponse build() {
+        proto.Demo.ShipOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ShipOrderResponse buildPartial() {
+        proto.Demo.ShipOrderResponse result = new proto.Demo.ShipOrderResponse(this);
+        result.trackingId_ = trackingId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.ShipOrderResponse) {
+          return mergeFrom((proto.Demo.ShipOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.ShipOrderResponse other) {
+        if (other == proto.Demo.ShipOrderResponse.getDefaultInstance()) return this;
+        if (!other.getTrackingId().isEmpty()) {
+          trackingId_ = other.trackingId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.ShipOrderResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.ShipOrderResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object trackingId_ = "";
+      /**
+       * <code>string tracking_id = 1;</code>
+       * @return The trackingId.
+       */
+      public java.lang.String getTrackingId() {
+        java.lang.Object ref = trackingId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          trackingId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string tracking_id = 1;</code>
+       * @return The bytes for trackingId.
+       */
+      public com.google.protobuf.ByteString
+          getTrackingIdBytes() {
+        java.lang.Object ref = trackingId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          trackingId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string tracking_id = 1;</code>
+       * @param value The trackingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrackingId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        trackingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tracking_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrackingId() {
+        
+        trackingId_ = getDefaultInstance().getTrackingId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string tracking_id = 1;</code>
+       * @param value The bytes for trackingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrackingIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        trackingId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ShipOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ShipOrderResponse)
+    private static final proto.Demo.ShipOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.ShipOrderResponse();
+    }
+
+    public static proto.Demo.ShipOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ShipOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ShipOrderResponse>() {
+      @java.lang.Override
+      public ShipOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ShipOrderResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ShipOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ShipOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.ShipOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface AddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Address)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string street_address = 1;</code>
+     * @return The streetAddress.
+     */
+    java.lang.String getStreetAddress();
+    /**
+     * <code>string street_address = 1;</code>
+     * @return The bytes for streetAddress.
+     */
+    com.google.protobuf.ByteString
+        getStreetAddressBytes();
+
+    /**
+     * <code>string city = 2;</code>
+     * @return The city.
+     */
+    java.lang.String getCity();
+    /**
+     * <code>string city = 2;</code>
+     * @return The bytes for city.
+     */
+    com.google.protobuf.ByteString
+        getCityBytes();
+
+    /**
+     * <code>string state = 3;</code>
+     * @return The state.
+     */
+    java.lang.String getState();
+    /**
+     * <code>string state = 3;</code>
+     * @return The bytes for state.
+     */
+    com.google.protobuf.ByteString
+        getStateBytes();
+
+    /**
+     * <code>string country = 4;</code>
+     * @return The country.
+     */
+    java.lang.String getCountry();
+    /**
+     * <code>string country = 4;</code>
+     * @return The bytes for country.
+     */
+    com.google.protobuf.ByteString
+        getCountryBytes();
+
+    /**
+     * <code>int32 zip_code = 5;</code>
+     * @return The zipCode.
+     */
+    int getZipCode();
+  }
+  /**
+   * Protobuf type {@code Address}
+   */
+  public  static final class Address extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Address)
+      AddressOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Address.newBuilder() to construct.
+    private Address(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Address() {
+      streetAddress_ = "";
+      city_ = "";
+      state_ = "";
+      country_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Address();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Address(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              streetAddress_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              city_ = s;
+              break;
+            }
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              state_ = s;
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              country_ = s;
+              break;
+            }
+            case 40: {
+
+              zipCode_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_Address_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_Address_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.Address.class, proto.Demo.Address.Builder.class);
+    }
+
+    public static final int STREET_ADDRESS_FIELD_NUMBER = 1;
+    private volatile java.lang.Object streetAddress_;
+    /**
+     * <code>string street_address = 1;</code>
+     * @return The streetAddress.
+     */
+    public java.lang.String getStreetAddress() {
+      java.lang.Object ref = streetAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        streetAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string street_address = 1;</code>
+     * @return The bytes for streetAddress.
+     */
+    public com.google.protobuf.ByteString
+        getStreetAddressBytes() {
+      java.lang.Object ref = streetAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        streetAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CITY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object city_;
+    /**
+     * <code>string city = 2;</code>
+     * @return The city.
+     */
+    public java.lang.String getCity() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        city_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string city = 2;</code>
+     * @return The bytes for city.
+     */
+    public com.google.protobuf.ByteString
+        getCityBytes() {
+      java.lang.Object ref = city_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        city_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int STATE_FIELD_NUMBER = 3;
+    private volatile java.lang.Object state_;
+    /**
+     * <code>string state = 3;</code>
+     * @return The state.
+     */
+    public java.lang.String getState() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        state_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string state = 3;</code>
+     * @return The bytes for state.
+     */
+    public com.google.protobuf.ByteString
+        getStateBytes() {
+      java.lang.Object ref = state_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        state_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int COUNTRY_FIELD_NUMBER = 4;
+    private volatile java.lang.Object country_;
+    /**
+     * <code>string country = 4;</code>
+     * @return The country.
+     */
+    public java.lang.String getCountry() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        country_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string country = 4;</code>
+     * @return The bytes for country.
+     */
+    public com.google.protobuf.ByteString
+        getCountryBytes() {
+      java.lang.Object ref = country_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        country_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ZIP_CODE_FIELD_NUMBER = 5;
+    private int zipCode_;
+    /**
+     * <code>int32 zip_code = 5;</code>
+     * @return The zipCode.
+     */
+    public int getZipCode() {
+      return zipCode_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getStreetAddressBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, streetAddress_);
+      }
+      if (!getCityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, city_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, state_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, country_);
+      }
+      if (zipCode_ != 0) {
+        output.writeInt32(5, zipCode_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getStreetAddressBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, streetAddress_);
+      }
+      if (!getCityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, city_);
+      }
+      if (!getStateBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, state_);
+      }
+      if (!getCountryBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, country_);
+      }
+      if (zipCode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, zipCode_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.Address)) {
+        return super.equals(obj);
+      }
+      proto.Demo.Address other = (proto.Demo.Address) obj;
+
+      if (!getStreetAddress()
+          .equals(other.getStreetAddress())) return false;
+      if (!getCity()
+          .equals(other.getCity())) return false;
+      if (!getState()
+          .equals(other.getState())) return false;
+      if (!getCountry()
+          .equals(other.getCountry())) return false;
+      if (getZipCode()
+          != other.getZipCode()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STREET_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getStreetAddress().hashCode();
+      hash = (37 * hash) + CITY_FIELD_NUMBER;
+      hash = (53 * hash) + getCity().hashCode();
+      hash = (37 * hash) + STATE_FIELD_NUMBER;
+      hash = (53 * hash) + getState().hashCode();
+      hash = (37 * hash) + COUNTRY_FIELD_NUMBER;
+      hash = (53 * hash) + getCountry().hashCode();
+      hash = (37 * hash) + ZIP_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getZipCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.Address parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.Address parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.Address parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.Address parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.Address parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.Address parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.Address parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.Address parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.Address parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.Address parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.Address parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.Address parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.Address prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Address}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Address)
+        proto.Demo.AddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_Address_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_Address_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.Address.class, proto.Demo.Address.Builder.class);
+      }
+
+      // Construct using proto.Demo.Address.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        streetAddress_ = "";
+
+        city_ = "";
+
+        state_ = "";
+
+        country_ = "";
+
+        zipCode_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_Address_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.Address getDefaultInstanceForType() {
+        return proto.Demo.Address.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.Address build() {
+        proto.Demo.Address result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.Address buildPartial() {
+        proto.Demo.Address result = new proto.Demo.Address(this);
+        result.streetAddress_ = streetAddress_;
+        result.city_ = city_;
+        result.state_ = state_;
+        result.country_ = country_;
+        result.zipCode_ = zipCode_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.Address) {
+          return mergeFrom((proto.Demo.Address)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.Address other) {
+        if (other == proto.Demo.Address.getDefaultInstance()) return this;
+        if (!other.getStreetAddress().isEmpty()) {
+          streetAddress_ = other.streetAddress_;
+          onChanged();
+        }
+        if (!other.getCity().isEmpty()) {
+          city_ = other.city_;
+          onChanged();
+        }
+        if (!other.getState().isEmpty()) {
+          state_ = other.state_;
+          onChanged();
+        }
+        if (!other.getCountry().isEmpty()) {
+          country_ = other.country_;
+          onChanged();
+        }
+        if (other.getZipCode() != 0) {
+          setZipCode(other.getZipCode());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.Address parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.Address) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object streetAddress_ = "";
+      /**
+       * <code>string street_address = 1;</code>
+       * @return The streetAddress.
+       */
+      public java.lang.String getStreetAddress() {
+        java.lang.Object ref = streetAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          streetAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string street_address = 1;</code>
+       * @return The bytes for streetAddress.
+       */
+      public com.google.protobuf.ByteString
+          getStreetAddressBytes() {
+        java.lang.Object ref = streetAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          streetAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string street_address = 1;</code>
+       * @param value The streetAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreetAddress(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        streetAddress_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string street_address = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStreetAddress() {
+        
+        streetAddress_ = getDefaultInstance().getStreetAddress();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string street_address = 1;</code>
+       * @param value The bytes for streetAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStreetAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        streetAddress_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object city_ = "";
+      /**
+       * <code>string city = 2;</code>
+       * @return The city.
+       */
+      public java.lang.String getCity() {
+        java.lang.Object ref = city_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          city_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string city = 2;</code>
+       * @return The bytes for city.
+       */
+      public com.google.protobuf.ByteString
+          getCityBytes() {
+        java.lang.Object ref = city_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          city_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string city = 2;</code>
+       * @param value The city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCity(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        city_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCity() {
+        
+        city_ = getDefaultInstance().getCity();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string city = 2;</code>
+       * @param value The bytes for city to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        city_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object state_ = "";
+      /**
+       * <code>string state = 3;</code>
+       * @return The state.
+       */
+      public java.lang.String getState() {
+        java.lang.Object ref = state_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          state_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string state = 3;</code>
+       * @return The bytes for state.
+       */
+      public com.google.protobuf.ByteString
+          getStateBytes() {
+        java.lang.Object ref = state_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          state_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string state = 3;</code>
+       * @param value The state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setState(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        state_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearState() {
+        
+        state_ = getDefaultInstance().getState();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string state = 3;</code>
+       * @param value The bytes for state to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStateBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        state_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object country_ = "";
+      /**
+       * <code>string country = 4;</code>
+       * @return The country.
+       */
+      public java.lang.String getCountry() {
+        java.lang.Object ref = country_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          country_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string country = 4;</code>
+       * @return The bytes for country.
+       */
+      public com.google.protobuf.ByteString
+          getCountryBytes() {
+        java.lang.Object ref = country_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          country_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string country = 4;</code>
+       * @param value The country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountry(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        country_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCountry() {
+        
+        country_ = getDefaultInstance().getCountry();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string country = 4;</code>
+       * @param value The bytes for country to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCountryBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        country_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int zipCode_ ;
+      /**
+       * <code>int32 zip_code = 5;</code>
+       * @return The zipCode.
+       */
+      public int getZipCode() {
+        return zipCode_;
+      }
+      /**
+       * <code>int32 zip_code = 5;</code>
+       * @param value The zipCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setZipCode(int value) {
+        
+        zipCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 zip_code = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearZipCode() {
+        
+        zipCode_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Address)
+    }
+
+    // @@protoc_insertion_point(class_scope:Address)
+    private static final proto.Demo.Address DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.Address();
+    }
+
+    public static proto.Demo.Address getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Address>
+        PARSER = new com.google.protobuf.AbstractParser<Address>() {
+      @java.lang.Override
+      public Address parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Address(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Address> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Address> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.Address getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CreditCardInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CreditCardInfo)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string credit_card_number = 1;</code>
+     * @return The creditCardNumber.
+     */
+    java.lang.String getCreditCardNumber();
+    /**
+     * <code>string credit_card_number = 1;</code>
+     * @return The bytes for creditCardNumber.
+     */
+    com.google.protobuf.ByteString
+        getCreditCardNumberBytes();
+
+    /**
+     * <code>int32 credit_card_cvv = 2;</code>
+     * @return The creditCardCvv.
+     */
+    int getCreditCardCvv();
+
+    /**
+     * <code>int32 credit_card_expiration_year = 3;</code>
+     * @return The creditCardExpirationYear.
+     */
+    int getCreditCardExpirationYear();
+
+    /**
+     * <code>int32 credit_card_expiration_month = 4;</code>
+     * @return The creditCardExpirationMonth.
+     */
+    int getCreditCardExpirationMonth();
+  }
+  /**
+   * Protobuf type {@code CreditCardInfo}
+   */
+  public  static final class CreditCardInfo extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:CreditCardInfo)
+      CreditCardInfoOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use CreditCardInfo.newBuilder() to construct.
+    private CreditCardInfo(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private CreditCardInfo() {
+      creditCardNumber_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new CreditCardInfo();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CreditCardInfo(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              creditCardNumber_ = s;
+              break;
+            }
+            case 16: {
+
+              creditCardCvv_ = input.readInt32();
+              break;
+            }
+            case 24: {
+
+              creditCardExpirationYear_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              creditCardExpirationMonth_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_CreditCardInfo_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_CreditCardInfo_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.CreditCardInfo.class, proto.Demo.CreditCardInfo.Builder.class);
+    }
+
+    public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 1;
+    private volatile java.lang.Object creditCardNumber_;
+    /**
+     * <code>string credit_card_number = 1;</code>
+     * @return The creditCardNumber.
+     */
+    public java.lang.String getCreditCardNumber() {
+      java.lang.Object ref = creditCardNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        creditCardNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string credit_card_number = 1;</code>
+     * @return The bytes for creditCardNumber.
+     */
+    public com.google.protobuf.ByteString
+        getCreditCardNumberBytes() {
+      java.lang.Object ref = creditCardNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        creditCardNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREDIT_CARD_CVV_FIELD_NUMBER = 2;
+    private int creditCardCvv_;
+    /**
+     * <code>int32 credit_card_cvv = 2;</code>
+     * @return The creditCardCvv.
+     */
+    public int getCreditCardCvv() {
+      return creditCardCvv_;
+    }
+
+    public static final int CREDIT_CARD_EXPIRATION_YEAR_FIELD_NUMBER = 3;
+    private int creditCardExpirationYear_;
+    /**
+     * <code>int32 credit_card_expiration_year = 3;</code>
+     * @return The creditCardExpirationYear.
+     */
+    public int getCreditCardExpirationYear() {
+      return creditCardExpirationYear_;
+    }
+
+    public static final int CREDIT_CARD_EXPIRATION_MONTH_FIELD_NUMBER = 4;
+    private int creditCardExpirationMonth_;
+    /**
+     * <code>int32 credit_card_expiration_month = 4;</code>
+     * @return The creditCardExpirationMonth.
+     */
+    public int getCreditCardExpirationMonth() {
+      return creditCardExpirationMonth_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getCreditCardNumberBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, creditCardNumber_);
+      }
+      if (creditCardCvv_ != 0) {
+        output.writeInt32(2, creditCardCvv_);
+      }
+      if (creditCardExpirationYear_ != 0) {
+        output.writeInt32(3, creditCardExpirationYear_);
+      }
+      if (creditCardExpirationMonth_ != 0) {
+        output.writeInt32(4, creditCardExpirationMonth_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getCreditCardNumberBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, creditCardNumber_);
+      }
+      if (creditCardCvv_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, creditCardCvv_);
+      }
+      if (creditCardExpirationYear_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, creditCardExpirationYear_);
+      }
+      if (creditCardExpirationMonth_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, creditCardExpirationMonth_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.CreditCardInfo)) {
+        return super.equals(obj);
+      }
+      proto.Demo.CreditCardInfo other = (proto.Demo.CreditCardInfo) obj;
+
+      if (!getCreditCardNumber()
+          .equals(other.getCreditCardNumber())) return false;
+      if (getCreditCardCvv()
+          != other.getCreditCardCvv()) return false;
+      if (getCreditCardExpirationYear()
+          != other.getCreditCardExpirationYear()) return false;
+      if (getCreditCardExpirationMonth()
+          != other.getCreditCardExpirationMonth()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + CREDIT_CARD_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCreditCardNumber().hashCode();
+      hash = (37 * hash) + CREDIT_CARD_CVV_FIELD_NUMBER;
+      hash = (53 * hash) + getCreditCardCvv();
+      hash = (37 * hash) + CREDIT_CARD_EXPIRATION_YEAR_FIELD_NUMBER;
+      hash = (53 * hash) + getCreditCardExpirationYear();
+      hash = (37 * hash) + CREDIT_CARD_EXPIRATION_MONTH_FIELD_NUMBER;
+      hash = (53 * hash) + getCreditCardExpirationMonth();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.CreditCardInfo parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.CreditCardInfo parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.CreditCardInfo parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.CreditCardInfo parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.CreditCardInfo prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CreditCardInfo}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CreditCardInfo)
+        proto.Demo.CreditCardInfoOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_CreditCardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_CreditCardInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.CreditCardInfo.class, proto.Demo.CreditCardInfo.Builder.class);
+      }
+
+      // Construct using proto.Demo.CreditCardInfo.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        creditCardNumber_ = "";
+
+        creditCardCvv_ = 0;
+
+        creditCardExpirationYear_ = 0;
+
+        creditCardExpirationMonth_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_CreditCardInfo_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.CreditCardInfo getDefaultInstanceForType() {
+        return proto.Demo.CreditCardInfo.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.CreditCardInfo build() {
+        proto.Demo.CreditCardInfo result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.CreditCardInfo buildPartial() {
+        proto.Demo.CreditCardInfo result = new proto.Demo.CreditCardInfo(this);
+        result.creditCardNumber_ = creditCardNumber_;
+        result.creditCardCvv_ = creditCardCvv_;
+        result.creditCardExpirationYear_ = creditCardExpirationYear_;
+        result.creditCardExpirationMonth_ = creditCardExpirationMonth_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.CreditCardInfo) {
+          return mergeFrom((proto.Demo.CreditCardInfo)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.CreditCardInfo other) {
+        if (other == proto.Demo.CreditCardInfo.getDefaultInstance()) return this;
+        if (!other.getCreditCardNumber().isEmpty()) {
+          creditCardNumber_ = other.creditCardNumber_;
+          onChanged();
+        }
+        if (other.getCreditCardCvv() != 0) {
+          setCreditCardCvv(other.getCreditCardCvv());
+        }
+        if (other.getCreditCardExpirationYear() != 0) {
+          setCreditCardExpirationYear(other.getCreditCardExpirationYear());
+        }
+        if (other.getCreditCardExpirationMonth() != 0) {
+          setCreditCardExpirationMonth(other.getCreditCardExpirationMonth());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.CreditCardInfo parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.CreditCardInfo) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object creditCardNumber_ = "";
+      /**
+       * <code>string credit_card_number = 1;</code>
+       * @return The creditCardNumber.
+       */
+      public java.lang.String getCreditCardNumber() {
+        java.lang.Object ref = creditCardNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          creditCardNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string credit_card_number = 1;</code>
+       * @return The bytes for creditCardNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCreditCardNumberBytes() {
+        java.lang.Object ref = creditCardNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          creditCardNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string credit_card_number = 1;</code>
+       * @param value The creditCardNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreditCardNumber(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        creditCardNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string credit_card_number = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreditCardNumber() {
+        
+        creditCardNumber_ = getDefaultInstance().getCreditCardNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string credit_card_number = 1;</code>
+       * @param value The bytes for creditCardNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreditCardNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        creditCardNumber_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int creditCardCvv_ ;
+      /**
+       * <code>int32 credit_card_cvv = 2;</code>
+       * @return The creditCardCvv.
+       */
+      public int getCreditCardCvv() {
+        return creditCardCvv_;
+      }
+      /**
+       * <code>int32 credit_card_cvv = 2;</code>
+       * @param value The creditCardCvv to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreditCardCvv(int value) {
+        
+        creditCardCvv_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 credit_card_cvv = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreditCardCvv() {
+        
+        creditCardCvv_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int creditCardExpirationYear_ ;
+      /**
+       * <code>int32 credit_card_expiration_year = 3;</code>
+       * @return The creditCardExpirationYear.
+       */
+      public int getCreditCardExpirationYear() {
+        return creditCardExpirationYear_;
+      }
+      /**
+       * <code>int32 credit_card_expiration_year = 3;</code>
+       * @param value The creditCardExpirationYear to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreditCardExpirationYear(int value) {
+        
+        creditCardExpirationYear_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 credit_card_expiration_year = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreditCardExpirationYear() {
+        
+        creditCardExpirationYear_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int creditCardExpirationMonth_ ;
+      /**
+       * <code>int32 credit_card_expiration_month = 4;</code>
+       * @return The creditCardExpirationMonth.
+       */
+      public int getCreditCardExpirationMonth() {
+        return creditCardExpirationMonth_;
+      }
+      /**
+       * <code>int32 credit_card_expiration_month = 4;</code>
+       * @param value The creditCardExpirationMonth to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCreditCardExpirationMonth(int value) {
+        
+        creditCardExpirationMonth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 credit_card_expiration_month = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCreditCardExpirationMonth() {
+        
+        creditCardExpirationMonth_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:CreditCardInfo)
+    }
+
+    // @@protoc_insertion_point(class_scope:CreditCardInfo)
+    private static final proto.Demo.CreditCardInfo DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.CreditCardInfo();
+    }
+
+    public static proto.Demo.CreditCardInfo getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CreditCardInfo>
+        PARSER = new com.google.protobuf.AbstractParser<CreditCardInfo>() {
+      @java.lang.Override
+      public CreditCardInfo parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CreditCardInfo(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<CreditCardInfo> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CreditCardInfo> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.CreditCardInfo getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChargeRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ChargeRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>int32 amount = 1;</code>
+     * @return The amount.
+     */
+    int getAmount();
+
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     * @return Whether the creditCard field is set.
+     */
+    boolean hasCreditCard();
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     * @return The creditCard.
+     */
+    proto.Demo.CreditCardInfo getCreditCard();
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     */
+    proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ChargeRequest}
+   */
+  public  static final class ChargeRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ChargeRequest)
+      ChargeRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChargeRequest.newBuilder() to construct.
+    private ChargeRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChargeRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChargeRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChargeRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              amount_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              proto.Demo.CreditCardInfo.Builder subBuilder = null;
+              if (creditCard_ != null) {
+                subBuilder = creditCard_.toBuilder();
+              }
+              creditCard_ = input.readMessage(proto.Demo.CreditCardInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creditCard_);
+                creditCard_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_ChargeRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_ChargeRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.ChargeRequest.class, proto.Demo.ChargeRequest.Builder.class);
+    }
+
+    public static final int AMOUNT_FIELD_NUMBER = 1;
+    private int amount_;
+    /**
+     * <code>int32 amount = 1;</code>
+     * @return The amount.
+     */
+    public int getAmount() {
+      return amount_;
+    }
+
+    public static final int CREDIT_CARD_FIELD_NUMBER = 2;
+    private proto.Demo.CreditCardInfo creditCard_;
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     * @return Whether the creditCard field is set.
+     */
+    public boolean hasCreditCard() {
+      return creditCard_ != null;
+    }
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     * @return The creditCard.
+     */
+    public proto.Demo.CreditCardInfo getCreditCard() {
+      return creditCard_ == null ? proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+    }
+    /**
+     * <code>.CreditCardInfo credit_card = 2;</code>
+     */
+    public proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder() {
+      return getCreditCard();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (amount_ != 0) {
+        output.writeInt32(1, amount_);
+      }
+      if (creditCard_ != null) {
+        output.writeMessage(2, getCreditCard());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (amount_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, amount_);
+      }
+      if (creditCard_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCreditCard());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.ChargeRequest)) {
+        return super.equals(obj);
+      }
+      proto.Demo.ChargeRequest other = (proto.Demo.ChargeRequest) obj;
+
+      if (getAmount()
+          != other.getAmount()) return false;
+      if (hasCreditCard() != other.hasCreditCard()) return false;
+      if (hasCreditCard()) {
+        if (!getCreditCard()
+            .equals(other.getCreditCard())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + AMOUNT_FIELD_NUMBER;
+      hash = (53 * hash) + getAmount();
+      if (hasCreditCard()) {
+        hash = (37 * hash) + CREDIT_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCard().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.ChargeRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ChargeRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.ChargeRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ChargeRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ChargeRequest)
+        proto.Demo.ChargeRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_ChargeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_ChargeRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.ChargeRequest.class, proto.Demo.ChargeRequest.Builder.class);
+      }
+
+      // Construct using proto.Demo.ChargeRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        amount_ = 0;
+
+        if (creditCardBuilder_ == null) {
+          creditCard_ = null;
+        } else {
+          creditCard_ = null;
+          creditCardBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_ChargeRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeRequest getDefaultInstanceForType() {
+        return proto.Demo.ChargeRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeRequest build() {
+        proto.Demo.ChargeRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeRequest buildPartial() {
+        proto.Demo.ChargeRequest result = new proto.Demo.ChargeRequest(this);
+        result.amount_ = amount_;
+        if (creditCardBuilder_ == null) {
+          result.creditCard_ = creditCard_;
+        } else {
+          result.creditCard_ = creditCardBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.ChargeRequest) {
+          return mergeFrom((proto.Demo.ChargeRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.ChargeRequest other) {
+        if (other == proto.Demo.ChargeRequest.getDefaultInstance()) return this;
+        if (other.getAmount() != 0) {
+          setAmount(other.getAmount());
+        }
+        if (other.hasCreditCard()) {
+          mergeCreditCard(other.getCreditCard());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.ChargeRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.ChargeRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private int amount_ ;
+      /**
+       * <code>int32 amount = 1;</code>
+       * @return The amount.
+       */
+      public int getAmount() {
+        return amount_;
+      }
+      /**
+       * <code>int32 amount = 1;</code>
+       * @param value The amount to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAmount(int value) {
+        
+        amount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 amount = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAmount() {
+        
+        amount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private proto.Demo.CreditCardInfo creditCard_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder> creditCardBuilder_;
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       * @return Whether the creditCard field is set.
+       */
+      public boolean hasCreditCard() {
+        return creditCardBuilder_ != null || creditCard_ != null;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       * @return The creditCard.
+       */
+      public proto.Demo.CreditCardInfo getCreditCard() {
+        if (creditCardBuilder_ == null) {
+          return creditCard_ == null ? proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+        } else {
+          return creditCardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public Builder setCreditCard(proto.Demo.CreditCardInfo value) {
+        if (creditCardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creditCard_ = value;
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public Builder setCreditCard(
+          proto.Demo.CreditCardInfo.Builder builderForValue) {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = builderForValue.build();
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public Builder mergeCreditCard(proto.Demo.CreditCardInfo value) {
+        if (creditCardBuilder_ == null) {
+          if (creditCard_ != null) {
+            creditCard_ =
+              proto.Demo.CreditCardInfo.newBuilder(creditCard_).mergeFrom(value).buildPartial();
+          } else {
+            creditCard_ = value;
+          }
+          onChanged();
+        } else {
+          creditCardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public Builder clearCreditCard() {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = null;
+          onChanged();
+        } else {
+          creditCard_ = null;
+          creditCardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public proto.Demo.CreditCardInfo.Builder getCreditCardBuilder() {
+        
+        onChanged();
+        return getCreditCardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      public proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder() {
+        if (creditCardBuilder_ != null) {
+          return creditCardBuilder_.getMessageOrBuilder();
+        } else {
+          return creditCard_ == null ?
+              proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+        }
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder> 
+          getCreditCardFieldBuilder() {
+        if (creditCardBuilder_ == null) {
+          creditCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder>(
+                  getCreditCard(),
+                  getParentForChildren(),
+                  isClean());
+          creditCard_ = null;
+        }
+        return creditCardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ChargeRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:ChargeRequest)
+    private static final proto.Demo.ChargeRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.ChargeRequest();
+    }
+
+    public static proto.Demo.ChargeRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChargeRequest>
+        PARSER = new com.google.protobuf.AbstractParser<ChargeRequest>() {
+      @java.lang.Override
+      public ChargeRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChargeRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChargeRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChargeRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.ChargeRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ChargeResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ChargeResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The transactionId.
+     */
+    java.lang.String getTransactionId();
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The bytes for transactionId.
+     */
+    com.google.protobuf.ByteString
+        getTransactionIdBytes();
+  }
+  /**
+   * Protobuf type {@code ChargeResponse}
+   */
+  public  static final class ChargeResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:ChargeResponse)
+      ChargeResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ChargeResponse.newBuilder() to construct.
+    private ChargeResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ChargeResponse() {
+      transactionId_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ChargeResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ChargeResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              transactionId_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_ChargeResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_ChargeResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.ChargeResponse.class, proto.Demo.ChargeResponse.Builder.class);
+    }
+
+    public static final int TRANSACTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object transactionId_;
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The transactionId.
+     */
+    public java.lang.String getTransactionId() {
+      java.lang.Object ref = transactionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        transactionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string transaction_id = 1;</code>
+     * @return The bytes for transactionId.
+     */
+    public com.google.protobuf.ByteString
+        getTransactionIdBytes() {
+      java.lang.Object ref = transactionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        transactionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getTransactionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, transactionId_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getTransactionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, transactionId_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.ChargeResponse)) {
+        return super.equals(obj);
+      }
+      proto.Demo.ChargeResponse other = (proto.Demo.ChargeResponse) obj;
+
+      if (!getTransactionId()
+          .equals(other.getTransactionId())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getTransactionId().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.ChargeResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ChargeResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.ChargeResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.ChargeResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ChargeResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ChargeResponse)
+        proto.Demo.ChargeResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_ChargeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_ChargeResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.ChargeResponse.class, proto.Demo.ChargeResponse.Builder.class);
+      }
+
+      // Construct using proto.Demo.ChargeResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        transactionId_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_ChargeResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeResponse getDefaultInstanceForType() {
+        return proto.Demo.ChargeResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeResponse build() {
+        proto.Demo.ChargeResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.ChargeResponse buildPartial() {
+        proto.Demo.ChargeResponse result = new proto.Demo.ChargeResponse(this);
+        result.transactionId_ = transactionId_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.ChargeResponse) {
+          return mergeFrom((proto.Demo.ChargeResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.ChargeResponse other) {
+        if (other == proto.Demo.ChargeResponse.getDefaultInstance()) return this;
+        if (!other.getTransactionId().isEmpty()) {
+          transactionId_ = other.transactionId_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.ChargeResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.ChargeResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object transactionId_ = "";
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return The transactionId.
+       */
+      public java.lang.String getTransactionId() {
+        java.lang.Object ref = transactionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          transactionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return The bytes for transactionId.
+       */
+      public com.google.protobuf.ByteString
+          getTransactionIdBytes() {
+        java.lang.Object ref = transactionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          transactionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @param value The transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        transactionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTransactionId() {
+        
+        transactionId_ = getDefaultInstance().getTransactionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string transaction_id = 1;</code>
+       * @param value The bytes for transactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        transactionId_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:ChargeResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:ChargeResponse)
+    private static final proto.Demo.ChargeResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.ChargeResponse();
+    }
+
+    public static proto.Demo.ChargeResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ChargeResponse>
+        PARSER = new com.google.protobuf.AbstractParser<ChargeResponse>() {
+      @java.lang.Override
+      public ChargeResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ChargeResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ChargeResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ChargeResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.ChargeResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PlaceOrderRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PlaceOrderRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string user_id = 1;</code>
+     * @return The userId.
+     */
+    java.lang.String getUserId();
+    /**
+     * <code>string user_id = 1;</code>
+     * @return The bytes for userId.
+     */
+    com.google.protobuf.ByteString
+        getUserIdBytes();
+
+    /**
+     * <code>string user_currency = 2;</code>
+     * @return The userCurrency.
+     */
+    java.lang.String getUserCurrency();
+    /**
+     * <code>string user_currency = 2;</code>
+     * @return The bytes for userCurrency.
+     */
+    com.google.protobuf.ByteString
+        getUserCurrencyBytes();
+
+    /**
+     * <code>.Address address = 3;</code>
+     * @return Whether the address field is set.
+     */
+    boolean hasAddress();
+    /**
+     * <code>.Address address = 3;</code>
+     * @return The address.
+     */
+    proto.Demo.Address getAddress();
+    /**
+     * <code>.Address address = 3;</code>
+     */
+    proto.Demo.AddressOrBuilder getAddressOrBuilder();
+
+    /**
+     * <code>string email = 5;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 5;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     * @return Whether the creditCard field is set.
+     */
+    boolean hasCreditCard();
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     * @return The creditCard.
+     */
+    proto.Demo.CreditCardInfo getCreditCard();
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     */
+    proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder();
+  }
+  /**
+   * Protobuf type {@code PlaceOrderRequest}
+   */
+  public  static final class PlaceOrderRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PlaceOrderRequest)
+      PlaceOrderRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlaceOrderRequest.newBuilder() to construct.
+    private PlaceOrderRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlaceOrderRequest() {
+      userId_ = "";
+      userCurrency_ = "";
+      email_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlaceOrderRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PlaceOrderRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              userCurrency_ = s;
+              break;
+            }
+            case 26: {
+              proto.Demo.Address.Builder subBuilder = null;
+              if (address_ != null) {
+                subBuilder = address_.toBuilder();
+              }
+              address_ = input.readMessage(proto.Demo.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(address_);
+                address_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            case 50: {
+              proto.Demo.CreditCardInfo.Builder subBuilder = null;
+              if (creditCard_ != null) {
+                subBuilder = creditCard_.toBuilder();
+              }
+              creditCard_ = input.readMessage(proto.Demo.CreditCardInfo.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creditCard_);
+                creditCard_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_PlaceOrderRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_PlaceOrderRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.PlaceOrderRequest.class, proto.Demo.PlaceOrderRequest.Builder.class);
+    }
+
+    public static final int USER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object userId_;
+    /**
+     * <code>string user_id = 1;</code>
+     * @return The userId.
+     */
+    public java.lang.String getUserId() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_id = 1;</code>
+     * @return The bytes for userId.
+     */
+    public com.google.protobuf.ByteString
+        getUserIdBytes() {
+      java.lang.Object ref = userId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int USER_CURRENCY_FIELD_NUMBER = 2;
+    private volatile java.lang.Object userCurrency_;
+    /**
+     * <code>string user_currency = 2;</code>
+     * @return The userCurrency.
+     */
+    public java.lang.String getUserCurrency() {
+      java.lang.Object ref = userCurrency_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        userCurrency_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string user_currency = 2;</code>
+     * @return The bytes for userCurrency.
+     */
+    public com.google.protobuf.ByteString
+        getUserCurrencyBytes() {
+      java.lang.Object ref = userCurrency_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        userCurrency_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ADDRESS_FIELD_NUMBER = 3;
+    private proto.Demo.Address address_;
+    /**
+     * <code>.Address address = 3;</code>
+     * @return Whether the address field is set.
+     */
+    public boolean hasAddress() {
+      return address_ != null;
+    }
+    /**
+     * <code>.Address address = 3;</code>
+     * @return The address.
+     */
+    public proto.Demo.Address getAddress() {
+      return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+    }
+    /**
+     * <code>.Address address = 3;</code>
+     */
+    public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+      return getAddress();
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 5;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 5;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 5;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREDIT_CARD_FIELD_NUMBER = 6;
+    private proto.Demo.CreditCardInfo creditCard_;
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     * @return Whether the creditCard field is set.
+     */
+    public boolean hasCreditCard() {
+      return creditCard_ != null;
+    }
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     * @return The creditCard.
+     */
+    public proto.Demo.CreditCardInfo getCreditCard() {
+      return creditCard_ == null ? proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+    }
+    /**
+     * <code>.CreditCardInfo credit_card = 6;</code>
+     */
+    public proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder() {
+      return getCreditCard();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getUserIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, userId_);
+      }
+      if (!getUserCurrencyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userCurrency_);
+      }
+      if (address_ != null) {
+        output.writeMessage(3, getAddress());
+      }
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 5, email_);
+      }
+      if (creditCard_ != null) {
+        output.writeMessage(6, getCreditCard());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getUserIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, userId_);
+      }
+      if (!getUserCurrencyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, userCurrency_);
+      }
+      if (address_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getAddress());
+      }
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, email_);
+      }
+      if (creditCard_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getCreditCard());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.PlaceOrderRequest)) {
+        return super.equals(obj);
+      }
+      proto.Demo.PlaceOrderRequest other = (proto.Demo.PlaceOrderRequest) obj;
+
+      if (!getUserId()
+          .equals(other.getUserId())) return false;
+      if (!getUserCurrency()
+          .equals(other.getUserCurrency())) return false;
+      if (hasAddress() != other.hasAddress()) return false;
+      if (hasAddress()) {
+        if (!getAddress()
+            .equals(other.getAddress())) return false;
+      }
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (hasCreditCard() != other.hasCreditCard()) return false;
+      if (hasCreditCard()) {
+        if (!getCreditCard()
+            .equals(other.getCreditCard())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + USER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getUserId().hashCode();
+      hash = (37 * hash) + USER_CURRENCY_FIELD_NUMBER;
+      hash = (53 * hash) + getUserCurrency().hashCode();
+      if (hasAddress()) {
+        hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getAddress().hashCode();
+      }
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
+      if (hasCreditCard()) {
+        hash = (37 * hash) + CREDIT_CARD_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCard().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.PlaceOrderRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PlaceOrderRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PlaceOrderRequest)
+        proto.Demo.PlaceOrderRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_PlaceOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_PlaceOrderRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.PlaceOrderRequest.class, proto.Demo.PlaceOrderRequest.Builder.class);
+      }
+
+      // Construct using proto.Demo.PlaceOrderRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        userId_ = "";
+
+        userCurrency_ = "";
+
+        if (addressBuilder_ == null) {
+          address_ = null;
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+        email_ = "";
+
+        if (creditCardBuilder_ == null) {
+          creditCard_ = null;
+        } else {
+          creditCard_ = null;
+          creditCardBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_PlaceOrderRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderRequest getDefaultInstanceForType() {
+        return proto.Demo.PlaceOrderRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderRequest build() {
+        proto.Demo.PlaceOrderRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderRequest buildPartial() {
+        proto.Demo.PlaceOrderRequest result = new proto.Demo.PlaceOrderRequest(this);
+        result.userId_ = userId_;
+        result.userCurrency_ = userCurrency_;
+        if (addressBuilder_ == null) {
+          result.address_ = address_;
+        } else {
+          result.address_ = addressBuilder_.build();
+        }
+        result.email_ = email_;
+        if (creditCardBuilder_ == null) {
+          result.creditCard_ = creditCard_;
+        } else {
+          result.creditCard_ = creditCardBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.PlaceOrderRequest) {
+          return mergeFrom((proto.Demo.PlaceOrderRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.PlaceOrderRequest other) {
+        if (other == proto.Demo.PlaceOrderRequest.getDefaultInstance()) return this;
+        if (!other.getUserId().isEmpty()) {
+          userId_ = other.userId_;
+          onChanged();
+        }
+        if (!other.getUserCurrency().isEmpty()) {
+          userCurrency_ = other.userCurrency_;
+          onChanged();
+        }
+        if (other.hasAddress()) {
+          mergeAddress(other.getAddress());
+        }
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasCreditCard()) {
+          mergeCreditCard(other.getCreditCard());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.PlaceOrderRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.PlaceOrderRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object userId_ = "";
+      /**
+       * <code>string user_id = 1;</code>
+       * @return The userId.
+       */
+      public java.lang.String getUserId() {
+        java.lang.Object ref = userId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1;</code>
+       * @return The bytes for userId.
+       */
+      public com.google.protobuf.ByteString
+          getUserIdBytes() {
+        java.lang.Object ref = userId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_id = 1;</code>
+       * @param value The userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserId() {
+        
+        userId_ = getDefaultInstance().getUserId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_id = 1;</code>
+       * @param value The bytes for userId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object userCurrency_ = "";
+      /**
+       * <code>string user_currency = 2;</code>
+       * @return The userCurrency.
+       */
+      public java.lang.String getUserCurrency() {
+        java.lang.Object ref = userCurrency_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userCurrency_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string user_currency = 2;</code>
+       * @return The bytes for userCurrency.
+       */
+      public com.google.protobuf.ByteString
+          getUserCurrencyBytes() {
+        java.lang.Object ref = userCurrency_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userCurrency_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string user_currency = 2;</code>
+       * @param value The userCurrency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserCurrency(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        userCurrency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_currency = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearUserCurrency() {
+        
+        userCurrency_ = getDefaultInstance().getUserCurrency();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string user_currency = 2;</code>
+       * @param value The bytes for userCurrency to set.
+       * @return This builder for chaining.
+       */
+      public Builder setUserCurrencyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        userCurrency_ = value;
+        onChanged();
+        return this;
+      }
+
+      private proto.Demo.Address address_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> addressBuilder_;
+      /**
+       * <code>.Address address = 3;</code>
+       * @return Whether the address field is set.
+       */
+      public boolean hasAddress() {
+        return addressBuilder_ != null || address_ != null;
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       * @return The address.
+       */
+      public proto.Demo.Address getAddress() {
+        if (addressBuilder_ == null) {
+          return address_ == null ? proto.Demo.Address.getDefaultInstance() : address_;
+        } else {
+          return addressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public Builder setAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          address_ = value;
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public Builder setAddress(
+          proto.Demo.Address.Builder builderForValue) {
+        if (addressBuilder_ == null) {
+          address_ = builderForValue.build();
+          onChanged();
+        } else {
+          addressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public Builder mergeAddress(proto.Demo.Address value) {
+        if (addressBuilder_ == null) {
+          if (address_ != null) {
+            address_ =
+              proto.Demo.Address.newBuilder(address_).mergeFrom(value).buildPartial();
+          } else {
+            address_ = value;
+          }
+          onChanged();
+        } else {
+          addressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public Builder clearAddress() {
+        if (addressBuilder_ == null) {
+          address_ = null;
+          onChanged();
+        } else {
+          address_ = null;
+          addressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public proto.Demo.Address.Builder getAddressBuilder() {
+        
+        onChanged();
+        return getAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      public proto.Demo.AddressOrBuilder getAddressOrBuilder() {
+        if (addressBuilder_ != null) {
+          return addressBuilder_.getMessageOrBuilder();
+        } else {
+          return address_ == null ?
+              proto.Demo.Address.getDefaultInstance() : address_;
+        }
+      }
+      /**
+       * <code>.Address address = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> 
+          getAddressFieldBuilder() {
+        if (addressBuilder_ == null) {
+          addressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder>(
+                  getAddress(),
+                  getParentForChildren(),
+                  isClean());
+          address_ = null;
+        }
+        return addressBuilder_;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 5;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 5;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 5;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 5;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private proto.Demo.CreditCardInfo creditCard_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder> creditCardBuilder_;
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       * @return Whether the creditCard field is set.
+       */
+      public boolean hasCreditCard() {
+        return creditCardBuilder_ != null || creditCard_ != null;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       * @return The creditCard.
+       */
+      public proto.Demo.CreditCardInfo getCreditCard() {
+        if (creditCardBuilder_ == null) {
+          return creditCard_ == null ? proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+        } else {
+          return creditCardBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public Builder setCreditCard(proto.Demo.CreditCardInfo value) {
+        if (creditCardBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creditCard_ = value;
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public Builder setCreditCard(
+          proto.Demo.CreditCardInfo.Builder builderForValue) {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = builderForValue.build();
+          onChanged();
+        } else {
+          creditCardBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public Builder mergeCreditCard(proto.Demo.CreditCardInfo value) {
+        if (creditCardBuilder_ == null) {
+          if (creditCard_ != null) {
+            creditCard_ =
+              proto.Demo.CreditCardInfo.newBuilder(creditCard_).mergeFrom(value).buildPartial();
+          } else {
+            creditCard_ = value;
+          }
+          onChanged();
+        } else {
+          creditCardBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public Builder clearCreditCard() {
+        if (creditCardBuilder_ == null) {
+          creditCard_ = null;
+          onChanged();
+        } else {
+          creditCard_ = null;
+          creditCardBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public proto.Demo.CreditCardInfo.Builder getCreditCardBuilder() {
+        
+        onChanged();
+        return getCreditCardFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      public proto.Demo.CreditCardInfoOrBuilder getCreditCardOrBuilder() {
+        if (creditCardBuilder_ != null) {
+          return creditCardBuilder_.getMessageOrBuilder();
+        } else {
+          return creditCard_ == null ?
+              proto.Demo.CreditCardInfo.getDefaultInstance() : creditCard_;
+        }
+      }
+      /**
+       * <code>.CreditCardInfo credit_card = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder> 
+          getCreditCardFieldBuilder() {
+        if (creditCardBuilder_ == null) {
+          creditCardBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.CreditCardInfo, proto.Demo.CreditCardInfo.Builder, proto.Demo.CreditCardInfoOrBuilder>(
+                  getCreditCard(),
+                  getParentForChildren(),
+                  isClean());
+          creditCard_ = null;
+        }
+        return creditCardBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PlaceOrderRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:PlaceOrderRequest)
+    private static final proto.Demo.PlaceOrderRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.PlaceOrderRequest();
+    }
+
+    public static proto.Demo.PlaceOrderRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PlaceOrderRequest>
+        PARSER = new com.google.protobuf.AbstractParser<PlaceOrderRequest>() {
+      @java.lang.Override
+      public PlaceOrderRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PlaceOrderRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlaceOrderRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlaceOrderRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.PlaceOrderRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PlaceOrderResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:PlaceOrderResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.OrderResult order = 1;</code>
+     * @return Whether the order field is set.
+     */
+    boolean hasOrder();
+    /**
+     * <code>.OrderResult order = 1;</code>
+     * @return The order.
+     */
+    proto.Demo.OrderResult getOrder();
+    /**
+     * <code>.OrderResult order = 1;</code>
+     */
+    proto.Demo.OrderResultOrBuilder getOrderOrBuilder();
+  }
+  /**
+   * Protobuf type {@code PlaceOrderResponse}
+   */
+  public  static final class PlaceOrderResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:PlaceOrderResponse)
+      PlaceOrderResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PlaceOrderResponse.newBuilder() to construct.
+    private PlaceOrderResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PlaceOrderResponse() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new PlaceOrderResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PlaceOrderResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              proto.Demo.OrderResult.Builder subBuilder = null;
+              if (order_ != null) {
+                subBuilder = order_.toBuilder();
+              }
+              order_ = input.readMessage(proto.Demo.OrderResult.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(order_);
+                order_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_PlaceOrderResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_PlaceOrderResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.PlaceOrderResponse.class, proto.Demo.PlaceOrderResponse.Builder.class);
+    }
+
+    public static final int ORDER_FIELD_NUMBER = 1;
+    private proto.Demo.OrderResult order_;
+    /**
+     * <code>.OrderResult order = 1;</code>
+     * @return Whether the order field is set.
+     */
+    public boolean hasOrder() {
+      return order_ != null;
+    }
+    /**
+     * <code>.OrderResult order = 1;</code>
+     * @return The order.
+     */
+    public proto.Demo.OrderResult getOrder() {
+      return order_ == null ? proto.Demo.OrderResult.getDefaultInstance() : order_;
+    }
+    /**
+     * <code>.OrderResult order = 1;</code>
+     */
+    public proto.Demo.OrderResultOrBuilder getOrderOrBuilder() {
+      return getOrder();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (order_ != null) {
+        output.writeMessage(1, getOrder());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (order_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getOrder());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.PlaceOrderResponse)) {
+        return super.equals(obj);
+      }
+      proto.Demo.PlaceOrderResponse other = (proto.Demo.PlaceOrderResponse) obj;
+
+      if (hasOrder() != other.hasOrder()) return false;
+      if (hasOrder()) {
+        if (!getOrder()
+            .equals(other.getOrder())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasOrder()) {
+        hash = (37 * hash) + ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrder().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.PlaceOrderResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.PlaceOrderResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code PlaceOrderResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:PlaceOrderResponse)
+        proto.Demo.PlaceOrderResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_PlaceOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_PlaceOrderResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.PlaceOrderResponse.class, proto.Demo.PlaceOrderResponse.Builder.class);
+      }
+
+      // Construct using proto.Demo.PlaceOrderResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (orderBuilder_ == null) {
+          order_ = null;
+        } else {
+          order_ = null;
+          orderBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_PlaceOrderResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderResponse getDefaultInstanceForType() {
+        return proto.Demo.PlaceOrderResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderResponse build() {
+        proto.Demo.PlaceOrderResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.PlaceOrderResponse buildPartial() {
+        proto.Demo.PlaceOrderResponse result = new proto.Demo.PlaceOrderResponse(this);
+        if (orderBuilder_ == null) {
+          result.order_ = order_;
+        } else {
+          result.order_ = orderBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.PlaceOrderResponse) {
+          return mergeFrom((proto.Demo.PlaceOrderResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.PlaceOrderResponse other) {
+        if (other == proto.Demo.PlaceOrderResponse.getDefaultInstance()) return this;
+        if (other.hasOrder()) {
+          mergeOrder(other.getOrder());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.PlaceOrderResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.PlaceOrderResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private proto.Demo.OrderResult order_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder> orderBuilder_;
+      /**
+       * <code>.OrderResult order = 1;</code>
+       * @return Whether the order field is set.
+       */
+      public boolean hasOrder() {
+        return orderBuilder_ != null || order_ != null;
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       * @return The order.
+       */
+      public proto.Demo.OrderResult getOrder() {
+        if (orderBuilder_ == null) {
+          return order_ == null ? proto.Demo.OrderResult.getDefaultInstance() : order_;
+        } else {
+          return orderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public Builder setOrder(proto.Demo.OrderResult value) {
+        if (orderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          order_ = value;
+          onChanged();
+        } else {
+          orderBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public Builder setOrder(
+          proto.Demo.OrderResult.Builder builderForValue) {
+        if (orderBuilder_ == null) {
+          order_ = builderForValue.build();
+          onChanged();
+        } else {
+          orderBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public Builder mergeOrder(proto.Demo.OrderResult value) {
+        if (orderBuilder_ == null) {
+          if (order_ != null) {
+            order_ =
+              proto.Demo.OrderResult.newBuilder(order_).mergeFrom(value).buildPartial();
+          } else {
+            order_ = value;
+          }
+          onChanged();
+        } else {
+          orderBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public Builder clearOrder() {
+        if (orderBuilder_ == null) {
+          order_ = null;
+          onChanged();
+        } else {
+          order_ = null;
+          orderBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public proto.Demo.OrderResult.Builder getOrderBuilder() {
+        
+        onChanged();
+        return getOrderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      public proto.Demo.OrderResultOrBuilder getOrderOrBuilder() {
+        if (orderBuilder_ != null) {
+          return orderBuilder_.getMessageOrBuilder();
+        } else {
+          return order_ == null ?
+              proto.Demo.OrderResult.getDefaultInstance() : order_;
+        }
+      }
+      /**
+       * <code>.OrderResult order = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder> 
+          getOrderFieldBuilder() {
+        if (orderBuilder_ == null) {
+          orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder>(
+                  getOrder(),
+                  getParentForChildren(),
+                  isClean());
+          order_ = null;
+        }
+        return orderBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:PlaceOrderResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:PlaceOrderResponse)
+    private static final proto.Demo.PlaceOrderResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.PlaceOrderResponse();
+    }
+
+    public static proto.Demo.PlaceOrderResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PlaceOrderResponse>
+        PARSER = new com.google.protobuf.AbstractParser<PlaceOrderResponse>() {
+      @java.lang.Override
+      public PlaceOrderResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PlaceOrderResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PlaceOrderResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PlaceOrderResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.PlaceOrderResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OrderItemOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:OrderItem)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.CartItem item = 1;</code>
+     * @return Whether the item field is set.
+     */
+    boolean hasItem();
+    /**
+     * <code>.CartItem item = 1;</code>
+     * @return The item.
+     */
+    proto.Demo.CartItem getItem();
+    /**
+     * <code>.CartItem item = 1;</code>
+     */
+    proto.Demo.CartItemOrBuilder getItemOrBuilder();
+
+    /**
+     * <code>int32 cost = 2;</code>
+     * @return The cost.
+     */
+    int getCost();
+  }
+  /**
+   * Protobuf type {@code OrderItem}
+   */
+  public  static final class OrderItem extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:OrderItem)
+      OrderItemOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OrderItem.newBuilder() to construct.
+    private OrderItem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OrderItem() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OrderItem();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OrderItem(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              proto.Demo.CartItem.Builder subBuilder = null;
+              if (item_ != null) {
+                subBuilder = item_.toBuilder();
+              }
+              item_ = input.readMessage(proto.Demo.CartItem.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(item_);
+                item_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 16: {
+
+              cost_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_OrderItem_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_OrderItem_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.OrderItem.class, proto.Demo.OrderItem.Builder.class);
+    }
+
+    public static final int ITEM_FIELD_NUMBER = 1;
+    private proto.Demo.CartItem item_;
+    /**
+     * <code>.CartItem item = 1;</code>
+     * @return Whether the item field is set.
+     */
+    public boolean hasItem() {
+      return item_ != null;
+    }
+    /**
+     * <code>.CartItem item = 1;</code>
+     * @return The item.
+     */
+    public proto.Demo.CartItem getItem() {
+      return item_ == null ? proto.Demo.CartItem.getDefaultInstance() : item_;
+    }
+    /**
+     * <code>.CartItem item = 1;</code>
+     */
+    public proto.Demo.CartItemOrBuilder getItemOrBuilder() {
+      return getItem();
+    }
+
+    public static final int COST_FIELD_NUMBER = 2;
+    private int cost_;
+    /**
+     * <code>int32 cost = 2;</code>
+     * @return The cost.
+     */
+    public int getCost() {
+      return cost_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (item_ != null) {
+        output.writeMessage(1, getItem());
+      }
+      if (cost_ != 0) {
+        output.writeInt32(2, cost_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (item_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getItem());
+      }
+      if (cost_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, cost_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.OrderItem)) {
+        return super.equals(obj);
+      }
+      proto.Demo.OrderItem other = (proto.Demo.OrderItem) obj;
+
+      if (hasItem() != other.hasItem()) return false;
+      if (hasItem()) {
+        if (!getItem()
+            .equals(other.getItem())) return false;
+      }
+      if (getCost()
+          != other.getCost()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasItem()) {
+        hash = (37 * hash) + ITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getItem().hashCode();
+      }
+      hash = (37 * hash) + COST_FIELD_NUMBER;
+      hash = (53 * hash) + getCost();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.OrderItem parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderItem parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderItem parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.OrderItem parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderItem parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderItem parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.OrderItem prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code OrderItem}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:OrderItem)
+        proto.Demo.OrderItemOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_OrderItem_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_OrderItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.OrderItem.class, proto.Demo.OrderItem.Builder.class);
+      }
+
+      // Construct using proto.Demo.OrderItem.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (itemBuilder_ == null) {
+          item_ = null;
+        } else {
+          item_ = null;
+          itemBuilder_ = null;
+        }
+        cost_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_OrderItem_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderItem getDefaultInstanceForType() {
+        return proto.Demo.OrderItem.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderItem build() {
+        proto.Demo.OrderItem result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderItem buildPartial() {
+        proto.Demo.OrderItem result = new proto.Demo.OrderItem(this);
+        if (itemBuilder_ == null) {
+          result.item_ = item_;
+        } else {
+          result.item_ = itemBuilder_.build();
+        }
+        result.cost_ = cost_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.OrderItem) {
+          return mergeFrom((proto.Demo.OrderItem)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.OrderItem other) {
+        if (other == proto.Demo.OrderItem.getDefaultInstance()) return this;
+        if (other.hasItem()) {
+          mergeItem(other.getItem());
+        }
+        if (other.getCost() != 0) {
+          setCost(other.getCost());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.OrderItem parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.OrderItem) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private proto.Demo.CartItem item_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> itemBuilder_;
+      /**
+       * <code>.CartItem item = 1;</code>
+       * @return Whether the item field is set.
+       */
+      public boolean hasItem() {
+        return itemBuilder_ != null || item_ != null;
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       * @return The item.
+       */
+      public proto.Demo.CartItem getItem() {
+        if (itemBuilder_ == null) {
+          return item_ == null ? proto.Demo.CartItem.getDefaultInstance() : item_;
+        } else {
+          return itemBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public Builder setItem(proto.Demo.CartItem value) {
+        if (itemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          item_ = value;
+          onChanged();
+        } else {
+          itemBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public Builder setItem(
+          proto.Demo.CartItem.Builder builderForValue) {
+        if (itemBuilder_ == null) {
+          item_ = builderForValue.build();
+          onChanged();
+        } else {
+          itemBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public Builder mergeItem(proto.Demo.CartItem value) {
+        if (itemBuilder_ == null) {
+          if (item_ != null) {
+            item_ =
+              proto.Demo.CartItem.newBuilder(item_).mergeFrom(value).buildPartial();
+          } else {
+            item_ = value;
+          }
+          onChanged();
+        } else {
+          itemBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public Builder clearItem() {
+        if (itemBuilder_ == null) {
+          item_ = null;
+          onChanged();
+        } else {
+          item_ = null;
+          itemBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public proto.Demo.CartItem.Builder getItemBuilder() {
+        
+        onChanged();
+        return getItemFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      public proto.Demo.CartItemOrBuilder getItemOrBuilder() {
+        if (itemBuilder_ != null) {
+          return itemBuilder_.getMessageOrBuilder();
+        } else {
+          return item_ == null ?
+              proto.Demo.CartItem.getDefaultInstance() : item_;
+        }
+      }
+      /**
+       * <code>.CartItem item = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder> 
+          getItemFieldBuilder() {
+        if (itemBuilder_ == null) {
+          itemBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.CartItem, proto.Demo.CartItem.Builder, proto.Demo.CartItemOrBuilder>(
+                  getItem(),
+                  getParentForChildren(),
+                  isClean());
+          item_ = null;
+        }
+        return itemBuilder_;
+      }
+
+      private int cost_ ;
+      /**
+       * <code>int32 cost = 2;</code>
+       * @return The cost.
+       */
+      public int getCost() {
+        return cost_;
+      }
+      /**
+       * <code>int32 cost = 2;</code>
+       * @param value The cost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCost(int value) {
+        
+        cost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 cost = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCost() {
+        
+        cost_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:OrderItem)
+    }
+
+    // @@protoc_insertion_point(class_scope:OrderItem)
+    private static final proto.Demo.OrderItem DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.OrderItem();
+    }
+
+    public static proto.Demo.OrderItem getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OrderItem>
+        PARSER = new com.google.protobuf.AbstractParser<OrderItem>() {
+      @java.lang.Override
+      public OrderItem parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrderItem(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OrderItem> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrderItem> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.OrderItem getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface OrderResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:OrderResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The orderId.
+     */
+    java.lang.String getOrderId();
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The bytes for orderId.
+     */
+    com.google.protobuf.ByteString
+        getOrderIdBytes();
+
+    /**
+     * <code>string shipping_tracking_id = 2;</code>
+     * @return The shippingTrackingId.
+     */
+    java.lang.String getShippingTrackingId();
+    /**
+     * <code>string shipping_tracking_id = 2;</code>
+     * @return The bytes for shippingTrackingId.
+     */
+    com.google.protobuf.ByteString
+        getShippingTrackingIdBytes();
+
+    /**
+     * <code>int32 shipping_cost = 3;</code>
+     * @return The shippingCost.
+     */
+    int getShippingCost();
+
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     * @return Whether the shippingAddress field is set.
+     */
+    boolean hasShippingAddress();
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     * @return The shippingAddress.
+     */
+    proto.Demo.Address getShippingAddress();
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     */
+    proto.Demo.AddressOrBuilder getShippingAddressOrBuilder();
+
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    java.util.List<proto.Demo.OrderItem> 
+        getItemsList();
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    proto.Demo.OrderItem getItems(int index);
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    int getItemsCount();
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    java.util.List<? extends proto.Demo.OrderItemOrBuilder> 
+        getItemsOrBuilderList();
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    proto.Demo.OrderItemOrBuilder getItemsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code OrderResult}
+   */
+  public  static final class OrderResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:OrderResult)
+      OrderResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use OrderResult.newBuilder() to construct.
+    private OrderResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private OrderResult() {
+      orderId_ = "";
+      shippingTrackingId_ = "";
+      items_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new OrderResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private OrderResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              orderId_ = s;
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              shippingTrackingId_ = s;
+              break;
+            }
+            case 24: {
+
+              shippingCost_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              proto.Demo.Address.Builder subBuilder = null;
+              if (shippingAddress_ != null) {
+                subBuilder = shippingAddress_.toBuilder();
+              }
+              shippingAddress_ = input.readMessage(proto.Demo.Address.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shippingAddress_);
+                shippingAddress_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                items_ = new java.util.ArrayList<proto.Demo.OrderItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              items_.add(
+                  input.readMessage(proto.Demo.OrderItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_OrderResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_OrderResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.OrderResult.class, proto.Demo.OrderResult.Builder.class);
+    }
+
+    public static final int ORDER_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object orderId_;
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The orderId.
+     */
+    public java.lang.String getOrderId() {
+      java.lang.Object ref = orderId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The bytes for orderId.
+     */
+    public com.google.protobuf.ByteString
+        getOrderIdBytes() {
+      java.lang.Object ref = orderId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHIPPING_TRACKING_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object shippingTrackingId_;
+    /**
+     * <code>string shipping_tracking_id = 2;</code>
+     * @return The shippingTrackingId.
+     */
+    public java.lang.String getShippingTrackingId() {
+      java.lang.Object ref = shippingTrackingId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        shippingTrackingId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string shipping_tracking_id = 2;</code>
+     * @return The bytes for shippingTrackingId.
+     */
+    public com.google.protobuf.ByteString
+        getShippingTrackingIdBytes() {
+      java.lang.Object ref = shippingTrackingId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        shippingTrackingId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SHIPPING_COST_FIELD_NUMBER = 3;
+    private int shippingCost_;
+    /**
+     * <code>int32 shipping_cost = 3;</code>
+     * @return The shippingCost.
+     */
+    public int getShippingCost() {
+      return shippingCost_;
+    }
+
+    public static final int SHIPPING_ADDRESS_FIELD_NUMBER = 4;
+    private proto.Demo.Address shippingAddress_;
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     * @return Whether the shippingAddress field is set.
+     */
+    public boolean hasShippingAddress() {
+      return shippingAddress_ != null;
+    }
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     * @return The shippingAddress.
+     */
+    public proto.Demo.Address getShippingAddress() {
+      return shippingAddress_ == null ? proto.Demo.Address.getDefaultInstance() : shippingAddress_;
+    }
+    /**
+     * <code>.Address shipping_address = 4;</code>
+     */
+    public proto.Demo.AddressOrBuilder getShippingAddressOrBuilder() {
+      return getShippingAddress();
+    }
+
+    public static final int ITEMS_FIELD_NUMBER = 5;
+    private java.util.List<proto.Demo.OrderItem> items_;
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    public java.util.List<proto.Demo.OrderItem> getItemsList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    public java.util.List<? extends proto.Demo.OrderItemOrBuilder> 
+        getItemsOrBuilderList() {
+      return items_;
+    }
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    public int getItemsCount() {
+      return items_.size();
+    }
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    public proto.Demo.OrderItem getItems(int index) {
+      return items_.get(index);
+    }
+    /**
+     * <code>repeated .OrderItem items = 5;</code>
+     */
+    public proto.Demo.OrderItemOrBuilder getItemsOrBuilder(
+        int index) {
+      return items_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getOrderIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
+      }
+      if (!getShippingTrackingIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, shippingTrackingId_);
+      }
+      if (shippingCost_ != 0) {
+        output.writeInt32(3, shippingCost_);
+      }
+      if (shippingAddress_ != null) {
+        output.writeMessage(4, getShippingAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        output.writeMessage(5, items_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getOrderIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
+      }
+      if (!getShippingTrackingIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, shippingTrackingId_);
+      }
+      if (shippingCost_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, shippingCost_);
+      }
+      if (shippingAddress_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getShippingAddress());
+      }
+      for (int i = 0; i < items_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, items_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.OrderResult)) {
+        return super.equals(obj);
+      }
+      proto.Demo.OrderResult other = (proto.Demo.OrderResult) obj;
+
+      if (!getOrderId()
+          .equals(other.getOrderId())) return false;
+      if (!getShippingTrackingId()
+          .equals(other.getShippingTrackingId())) return false;
+      if (getShippingCost()
+          != other.getShippingCost()) return false;
+      if (hasShippingAddress() != other.hasShippingAddress()) return false;
+      if (hasShippingAddress()) {
+        if (!getShippingAddress()
+            .equals(other.getShippingAddress())) return false;
+      }
+      if (!getItemsList()
+          .equals(other.getItemsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOrderId().hashCode();
+      hash = (37 * hash) + SHIPPING_TRACKING_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getShippingTrackingId().hashCode();
+      hash = (37 * hash) + SHIPPING_COST_FIELD_NUMBER;
+      hash = (53 * hash) + getShippingCost();
+      if (hasShippingAddress()) {
+        hash = (37 * hash) + SHIPPING_ADDRESS_FIELD_NUMBER;
+        hash = (53 * hash) + getShippingAddress().hashCode();
+      }
+      if (getItemsCount() > 0) {
+        hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+        hash = (53 * hash) + getItemsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.OrderResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.OrderResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.OrderResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.OrderResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.OrderResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code OrderResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:OrderResult)
+        proto.Demo.OrderResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_OrderResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_OrderResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.OrderResult.class, proto.Demo.OrderResult.Builder.class);
+      }
+
+      // Construct using proto.Demo.OrderResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getItemsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        orderId_ = "";
+
+        shippingTrackingId_ = "";
+
+        shippingCost_ = 0;
+
+        if (shippingAddressBuilder_ == null) {
+          shippingAddress_ = null;
+        } else {
+          shippingAddress_ = null;
+          shippingAddressBuilder_ = null;
+        }
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_OrderResult_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderResult getDefaultInstanceForType() {
+        return proto.Demo.OrderResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderResult build() {
+        proto.Demo.OrderResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.OrderResult buildPartial() {
+        proto.Demo.OrderResult result = new proto.Demo.OrderResult(this);
+        int from_bitField0_ = bitField0_;
+        result.orderId_ = orderId_;
+        result.shippingTrackingId_ = shippingTrackingId_;
+        result.shippingCost_ = shippingCost_;
+        if (shippingAddressBuilder_ == null) {
+          result.shippingAddress_ = shippingAddress_;
+        } else {
+          result.shippingAddress_ = shippingAddressBuilder_.build();
+        }
+        if (itemsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            items_ = java.util.Collections.unmodifiableList(items_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.items_ = items_;
+        } else {
+          result.items_ = itemsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.OrderResult) {
+          return mergeFrom((proto.Demo.OrderResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.OrderResult other) {
+        if (other == proto.Demo.OrderResult.getDefaultInstance()) return this;
+        if (!other.getOrderId().isEmpty()) {
+          orderId_ = other.orderId_;
+          onChanged();
+        }
+        if (!other.getShippingTrackingId().isEmpty()) {
+          shippingTrackingId_ = other.shippingTrackingId_;
+          onChanged();
+        }
+        if (other.getShippingCost() != 0) {
+          setShippingCost(other.getShippingCost());
+        }
+        if (other.hasShippingAddress()) {
+          mergeShippingAddress(other.getShippingAddress());
+        }
+        if (itemsBuilder_ == null) {
+          if (!other.items_.isEmpty()) {
+            if (items_.isEmpty()) {
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureItemsIsMutable();
+              items_.addAll(other.items_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.items_.isEmpty()) {
+            if (itemsBuilder_.isEmpty()) {
+              itemsBuilder_.dispose();
+              itemsBuilder_ = null;
+              items_ = other.items_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              itemsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getItemsFieldBuilder() : null;
+            } else {
+              itemsBuilder_.addAllMessages(other.items_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.OrderResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.OrderResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object orderId_ = "";
+      /**
+       * <code>string order_id = 1;</code>
+       * @return The orderId.
+       */
+      public java.lang.String getOrderId() {
+        java.lang.Object ref = orderId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          orderId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string order_id = 1;</code>
+       * @return The bytes for orderId.
+       */
+      public com.google.protobuf.ByteString
+          getOrderIdBytes() {
+        java.lang.Object ref = orderId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          orderId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string order_id = 1;</code>
+       * @param value The orderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        orderId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOrderId() {
+        
+        orderId_ = getDefaultInstance().getOrderId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string order_id = 1;</code>
+       * @param value The bytes for orderId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOrderIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        orderId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object shippingTrackingId_ = "";
+      /**
+       * <code>string shipping_tracking_id = 2;</code>
+       * @return The shippingTrackingId.
+       */
+      public java.lang.String getShippingTrackingId() {
+        java.lang.Object ref = shippingTrackingId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          shippingTrackingId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string shipping_tracking_id = 2;</code>
+       * @return The bytes for shippingTrackingId.
+       */
+      public com.google.protobuf.ByteString
+          getShippingTrackingIdBytes() {
+        java.lang.Object ref = shippingTrackingId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          shippingTrackingId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string shipping_tracking_id = 2;</code>
+       * @param value The shippingTrackingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShippingTrackingId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        shippingTrackingId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string shipping_tracking_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShippingTrackingId() {
+        
+        shippingTrackingId_ = getDefaultInstance().getShippingTrackingId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string shipping_tracking_id = 2;</code>
+       * @param value The bytes for shippingTrackingId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShippingTrackingIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        shippingTrackingId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int shippingCost_ ;
+      /**
+       * <code>int32 shipping_cost = 3;</code>
+       * @return The shippingCost.
+       */
+      public int getShippingCost() {
+        return shippingCost_;
+      }
+      /**
+       * <code>int32 shipping_cost = 3;</code>
+       * @param value The shippingCost to set.
+       * @return This builder for chaining.
+       */
+      public Builder setShippingCost(int value) {
+        
+        shippingCost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 shipping_cost = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearShippingCost() {
+        
+        shippingCost_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private proto.Demo.Address shippingAddress_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> shippingAddressBuilder_;
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       * @return Whether the shippingAddress field is set.
+       */
+      public boolean hasShippingAddress() {
+        return shippingAddressBuilder_ != null || shippingAddress_ != null;
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       * @return The shippingAddress.
+       */
+      public proto.Demo.Address getShippingAddress() {
+        if (shippingAddressBuilder_ == null) {
+          return shippingAddress_ == null ? proto.Demo.Address.getDefaultInstance() : shippingAddress_;
+        } else {
+          return shippingAddressBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public Builder setShippingAddress(proto.Demo.Address value) {
+        if (shippingAddressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shippingAddress_ = value;
+          onChanged();
+        } else {
+          shippingAddressBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public Builder setShippingAddress(
+          proto.Demo.Address.Builder builderForValue) {
+        if (shippingAddressBuilder_ == null) {
+          shippingAddress_ = builderForValue.build();
+          onChanged();
+        } else {
+          shippingAddressBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public Builder mergeShippingAddress(proto.Demo.Address value) {
+        if (shippingAddressBuilder_ == null) {
+          if (shippingAddress_ != null) {
+            shippingAddress_ =
+              proto.Demo.Address.newBuilder(shippingAddress_).mergeFrom(value).buildPartial();
+          } else {
+            shippingAddress_ = value;
+          }
+          onChanged();
+        } else {
+          shippingAddressBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public Builder clearShippingAddress() {
+        if (shippingAddressBuilder_ == null) {
+          shippingAddress_ = null;
+          onChanged();
+        } else {
+          shippingAddress_ = null;
+          shippingAddressBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public proto.Demo.Address.Builder getShippingAddressBuilder() {
+        
+        onChanged();
+        return getShippingAddressFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      public proto.Demo.AddressOrBuilder getShippingAddressOrBuilder() {
+        if (shippingAddressBuilder_ != null) {
+          return shippingAddressBuilder_.getMessageOrBuilder();
+        } else {
+          return shippingAddress_ == null ?
+              proto.Demo.Address.getDefaultInstance() : shippingAddress_;
+        }
+      }
+      /**
+       * <code>.Address shipping_address = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder> 
+          getShippingAddressFieldBuilder() {
+        if (shippingAddressBuilder_ == null) {
+          shippingAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.Address, proto.Demo.Address.Builder, proto.Demo.AddressOrBuilder>(
+                  getShippingAddress(),
+                  getParentForChildren(),
+                  isClean());
+          shippingAddress_ = null;
+        }
+        return shippingAddressBuilder_;
+      }
+
+      private java.util.List<proto.Demo.OrderItem> items_ =
+        java.util.Collections.emptyList();
+      private void ensureItemsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          items_ = new java.util.ArrayList<proto.Demo.OrderItem>(items_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.OrderItem, proto.Demo.OrderItem.Builder, proto.Demo.OrderItemOrBuilder> itemsBuilder_;
+
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public java.util.List<proto.Demo.OrderItem> getItemsList() {
+        if (itemsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(items_);
+        } else {
+          return itemsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public int getItemsCount() {
+        if (itemsBuilder_ == null) {
+          return items_.size();
+        } else {
+          return itemsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public proto.Demo.OrderItem getItems(int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);
+        } else {
+          return itemsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.OrderItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.set(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder setItems(
+          int index, proto.Demo.OrderItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder addItems(proto.Demo.OrderItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.OrderItem value) {
+        if (itemsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureItemsIsMutable();
+          items_.add(index, value);
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder addItems(
+          proto.Demo.OrderItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder addItems(
+          int index, proto.Demo.OrderItem.Builder builderForValue) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          itemsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder addAllItems(
+          java.lang.Iterable<? extends proto.Demo.OrderItem> values) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, items_);
+          onChanged();
+        } else {
+          itemsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder clearItems() {
+        if (itemsBuilder_ == null) {
+          items_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          itemsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public Builder removeItems(int index) {
+        if (itemsBuilder_ == null) {
+          ensureItemsIsMutable();
+          items_.remove(index);
+          onChanged();
+        } else {
+          itemsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public proto.Demo.OrderItem.Builder getItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public proto.Demo.OrderItemOrBuilder getItemsOrBuilder(
+          int index) {
+        if (itemsBuilder_ == null) {
+          return items_.get(index);  } else {
+          return itemsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public java.util.List<? extends proto.Demo.OrderItemOrBuilder> 
+           getItemsOrBuilderList() {
+        if (itemsBuilder_ != null) {
+          return itemsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(items_);
+        }
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public proto.Demo.OrderItem.Builder addItemsBuilder() {
+        return getItemsFieldBuilder().addBuilder(
+            proto.Demo.OrderItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public proto.Demo.OrderItem.Builder addItemsBuilder(
+          int index) {
+        return getItemsFieldBuilder().addBuilder(
+            index, proto.Demo.OrderItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .OrderItem items = 5;</code>
+       */
+      public java.util.List<proto.Demo.OrderItem.Builder> 
+           getItemsBuilderList() {
+        return getItemsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          proto.Demo.OrderItem, proto.Demo.OrderItem.Builder, proto.Demo.OrderItemOrBuilder> 
+          getItemsFieldBuilder() {
+        if (itemsBuilder_ == null) {
+          itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              proto.Demo.OrderItem, proto.Demo.OrderItem.Builder, proto.Demo.OrderItemOrBuilder>(
+                  items_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          items_ = null;
+        }
+        return itemsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:OrderResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:OrderResult)
+    private static final proto.Demo.OrderResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.OrderResult();
+    }
+
+    public static proto.Demo.OrderResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<OrderResult>
+        PARSER = new com.google.protobuf.AbstractParser<OrderResult>() {
+      @java.lang.Override
+      public OrderResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new OrderResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<OrderResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<OrderResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.OrderResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SendOrderConfirmationRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SendOrderConfirmationRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string email = 1;</code>
+     * @return The email.
+     */
+    java.lang.String getEmail();
+    /**
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
+     */
+    com.google.protobuf.ByteString
+        getEmailBytes();
+
+    /**
+     * <code>.OrderResult order = 2;</code>
+     * @return Whether the order field is set.
+     */
+    boolean hasOrder();
+    /**
+     * <code>.OrderResult order = 2;</code>
+     * @return The order.
+     */
+    proto.Demo.OrderResult getOrder();
+    /**
+     * <code>.OrderResult order = 2;</code>
+     */
+    proto.Demo.OrderResultOrBuilder getOrderOrBuilder();
+  }
+  /**
+   * Protobuf type {@code SendOrderConfirmationRequest}
+   */
+  public  static final class SendOrderConfirmationRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SendOrderConfirmationRequest)
+      SendOrderConfirmationRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SendOrderConfirmationRequest.newBuilder() to construct.
+    private SendOrderConfirmationRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SendOrderConfirmationRequest() {
+      email_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SendOrderConfirmationRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SendOrderConfirmationRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              email_ = s;
+              break;
+            }
+            case 18: {
+              proto.Demo.OrderResult.Builder subBuilder = null;
+              if (order_ != null) {
+                subBuilder = order_.toBuilder();
+              }
+              order_ = input.readMessage(proto.Demo.OrderResult.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(order_);
+                order_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return proto.Demo.internal_static_SendOrderConfirmationRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return proto.Demo.internal_static_SendOrderConfirmationRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              proto.Demo.SendOrderConfirmationRequest.class, proto.Demo.SendOrderConfirmationRequest.Builder.class);
+    }
+
+    public static final int EMAIL_FIELD_NUMBER = 1;
+    private volatile java.lang.Object email_;
+    /**
+     * <code>string email = 1;</code>
+     * @return The email.
+     */
+    public java.lang.String getEmail() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        email_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string email = 1;</code>
+     * @return The bytes for email.
+     */
+    public com.google.protobuf.ByteString
+        getEmailBytes() {
+      java.lang.Object ref = email_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        email_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ORDER_FIELD_NUMBER = 2;
+    private proto.Demo.OrderResult order_;
+    /**
+     * <code>.OrderResult order = 2;</code>
+     * @return Whether the order field is set.
+     */
+    public boolean hasOrder() {
+      return order_ != null;
+    }
+    /**
+     * <code>.OrderResult order = 2;</code>
+     * @return The order.
+     */
+    public proto.Demo.OrderResult getOrder() {
+      return order_ == null ? proto.Demo.OrderResult.getDefaultInstance() : order_;
+    }
+    /**
+     * <code>.OrderResult order = 2;</code>
+     */
+    public proto.Demo.OrderResultOrBuilder getOrderOrBuilder() {
+      return getOrder();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getEmailBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, email_);
+      }
+      if (order_ != null) {
+        output.writeMessage(2, getOrder());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getEmailBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, email_);
+      }
+      if (order_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getOrder());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof proto.Demo.SendOrderConfirmationRequest)) {
+        return super.equals(obj);
+      }
+      proto.Demo.SendOrderConfirmationRequest other = (proto.Demo.SendOrderConfirmationRequest) obj;
+
+      if (!getEmail()
+          .equals(other.getEmail())) return false;
+      if (hasOrder() != other.hasOrder()) return false;
+      if (hasOrder()) {
+        if (!getOrder()
+            .equals(other.getOrder())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + EMAIL_FIELD_NUMBER;
+      hash = (53 * hash) + getEmail().hashCode();
+      if (hasOrder()) {
+        hash = (37 * hash) + ORDER_FIELD_NUMBER;
+        hash = (53 * hash) + getOrder().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static proto.Demo.SendOrderConfirmationRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(proto.Demo.SendOrderConfirmationRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SendOrderConfirmationRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SendOrderConfirmationRequest)
+        proto.Demo.SendOrderConfirmationRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return proto.Demo.internal_static_SendOrderConfirmationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return proto.Demo.internal_static_SendOrderConfirmationRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                proto.Demo.SendOrderConfirmationRequest.class, proto.Demo.SendOrderConfirmationRequest.Builder.class);
+      }
+
+      // Construct using proto.Demo.SendOrderConfirmationRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        email_ = "";
+
+        if (orderBuilder_ == null) {
+          order_ = null;
+        } else {
+          order_ = null;
+          orderBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return proto.Demo.internal_static_SendOrderConfirmationRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public proto.Demo.SendOrderConfirmationRequest getDefaultInstanceForType() {
+        return proto.Demo.SendOrderConfirmationRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public proto.Demo.SendOrderConfirmationRequest build() {
+        proto.Demo.SendOrderConfirmationRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public proto.Demo.SendOrderConfirmationRequest buildPartial() {
+        proto.Demo.SendOrderConfirmationRequest result = new proto.Demo.SendOrderConfirmationRequest(this);
+        result.email_ = email_;
+        if (orderBuilder_ == null) {
+          result.order_ = order_;
+        } else {
+          result.order_ = orderBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof proto.Demo.SendOrderConfirmationRequest) {
+          return mergeFrom((proto.Demo.SendOrderConfirmationRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(proto.Demo.SendOrderConfirmationRequest other) {
+        if (other == proto.Demo.SendOrderConfirmationRequest.getDefaultInstance()) return this;
+        if (!other.getEmail().isEmpty()) {
+          email_ = other.email_;
+          onChanged();
+        }
+        if (other.hasOrder()) {
+          mergeOrder(other.getOrder());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        proto.Demo.SendOrderConfirmationRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (proto.Demo.SendOrderConfirmationRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object email_ = "";
+      /**
+       * <code>string email = 1;</code>
+       * @return The email.
+       */
+      public java.lang.String getEmail() {
+        java.lang.Object ref = email_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          email_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string email = 1;</code>
+       * @return The bytes for email.
+       */
+      public com.google.protobuf.ByteString
+          getEmailBytes() {
+        java.lang.Object ref = email_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          email_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string email = 1;</code>
+       * @param value The email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmail(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        email_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEmail() {
+        
+        email_ = getDefaultInstance().getEmail();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string email = 1;</code>
+       * @param value The bytes for email to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEmailBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        email_ = value;
+        onChanged();
+        return this;
+      }
+
+      private proto.Demo.OrderResult order_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder> orderBuilder_;
+      /**
+       * <code>.OrderResult order = 2;</code>
+       * @return Whether the order field is set.
+       */
+      public boolean hasOrder() {
+        return orderBuilder_ != null || order_ != null;
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       * @return The order.
+       */
+      public proto.Demo.OrderResult getOrder() {
+        if (orderBuilder_ == null) {
+          return order_ == null ? proto.Demo.OrderResult.getDefaultInstance() : order_;
+        } else {
+          return orderBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public Builder setOrder(proto.Demo.OrderResult value) {
+        if (orderBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          order_ = value;
+          onChanged();
+        } else {
+          orderBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public Builder setOrder(
+          proto.Demo.OrderResult.Builder builderForValue) {
+        if (orderBuilder_ == null) {
+          order_ = builderForValue.build();
+          onChanged();
+        } else {
+          orderBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public Builder mergeOrder(proto.Demo.OrderResult value) {
+        if (orderBuilder_ == null) {
+          if (order_ != null) {
+            order_ =
+              proto.Demo.OrderResult.newBuilder(order_).mergeFrom(value).buildPartial();
+          } else {
+            order_ = value;
+          }
+          onChanged();
+        } else {
+          orderBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public Builder clearOrder() {
+        if (orderBuilder_ == null) {
+          order_ = null;
+          onChanged();
+        } else {
+          order_ = null;
+          orderBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public proto.Demo.OrderResult.Builder getOrderBuilder() {
+        
+        onChanged();
+        return getOrderFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      public proto.Demo.OrderResultOrBuilder getOrderOrBuilder() {
+        if (orderBuilder_ != null) {
+          return orderBuilder_.getMessageOrBuilder();
+        } else {
+          return order_ == null ?
+              proto.Demo.OrderResult.getDefaultInstance() : order_;
+        }
+      }
+      /**
+       * <code>.OrderResult order = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder> 
+          getOrderFieldBuilder() {
+        if (orderBuilder_ == null) {
+          orderBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              proto.Demo.OrderResult, proto.Demo.OrderResult.Builder, proto.Demo.OrderResultOrBuilder>(
+                  getOrder(),
+                  getParentForChildren(),
+                  isClean());
+          order_ = null;
+        }
+        return orderBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SendOrderConfirmationRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:SendOrderConfirmationRequest)
+    private static final proto.Demo.SendOrderConfirmationRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new proto.Demo.SendOrderConfirmationRequest();
+    }
+
+    public static proto.Demo.SendOrderConfirmationRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SendOrderConfirmationRequest>
+        PARSER = new com.google.protobuf.AbstractParser<SendOrderConfirmationRequest>() {
+      @java.lang.Override
+      public SendOrderConfirmationRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SendOrderConfirmationRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SendOrderConfirmationRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SendOrderConfirmationRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public proto.Demo.SendOrderConfirmationRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   /**
    * Protobuf service {@code ProductCatalogService}
    */
@@ -11446,6 +22258,1005 @@ public final class Demo {
     // @@protoc_insertion_point(class_scope:CartService)
   }
 
+  /**
+   * Protobuf service {@code ShippingService}
+   */
+  public static abstract class ShippingService
+      implements com.google.protobuf.Service {
+    protected ShippingService() {}
+
+    public interface Interface {
+      /**
+       * <code>rpc GetQuote(.GetQuoteRequest) returns (.GetQuoteResponse);</code>
+       */
+      public abstract void getQuote(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.GetQuoteRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.GetQuoteResponse> done);
+
+      /**
+       * <code>rpc ShipOrder(.ShipOrderRequest) returns (.ShipOrderResponse);</code>
+       */
+      public abstract void shipOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ShipOrderRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.ShipOrderResponse> done);
+
+    }
+
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new ShippingService() {
+        @java.lang.Override
+        public  void getQuote(
+            com.google.protobuf.RpcController controller,
+            proto.Demo.GetQuoteRequest request,
+            com.google.protobuf.RpcCallback<proto.Demo.GetQuoteResponse> done) {
+          impl.getQuote(controller, request, done);
+        }
+
+        @java.lang.Override
+        public  void shipOrder(
+            com.google.protobuf.RpcController controller,
+            proto.Demo.ShipOrderRequest request,
+            com.google.protobuf.RpcCallback<proto.Demo.ShipOrderResponse> done) {
+          impl.shipOrder(controller, request, done);
+        }
+
+      };
+    }
+
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.getQuote(controller, (proto.Demo.GetQuoteRequest)request);
+            case 1:
+              return impl.shipOrder(controller, (proto.Demo.ShipOrderRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.GetQuoteRequest.getDefaultInstance();
+            case 1:
+              return proto.Demo.ShipOrderRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.GetQuoteResponse.getDefaultInstance();
+            case 1:
+              return proto.Demo.ShipOrderResponse.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+      };
+    }
+
+    /**
+     * <code>rpc GetQuote(.GetQuoteRequest) returns (.GetQuoteResponse);</code>
+     */
+    public abstract void getQuote(
+        com.google.protobuf.RpcController controller,
+        proto.Demo.GetQuoteRequest request,
+        com.google.protobuf.RpcCallback<proto.Demo.GetQuoteResponse> done);
+
+    /**
+     * <code>rpc ShipOrder(.ShipOrderRequest) returns (.ShipOrderResponse);</code>
+     */
+    public abstract void shipOrder(
+        com.google.protobuf.RpcController controller,
+        proto.Demo.ShipOrderRequest request,
+        com.google.protobuf.RpcCallback<proto.Demo.ShipOrderResponse> done);
+
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return proto.Demo.getDescriptor().getServices().get(2);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.getQuote(controller, (proto.Demo.GetQuoteRequest)request,
+            com.google.protobuf.RpcUtil.<proto.Demo.GetQuoteResponse>specializeCallback(
+              done));
+          return;
+        case 1:
+          this.shipOrder(controller, (proto.Demo.ShipOrderRequest)request,
+            com.google.protobuf.RpcUtil.<proto.Demo.ShipOrderResponse>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.GetQuoteRequest.getDefaultInstance();
+        case 1:
+          return proto.Demo.ShipOrderRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.GetQuoteResponse.getDefaultInstance();
+        case 1:
+          return proto.Demo.ShipOrderResponse.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+
+    public static final class Stub extends proto.Demo.ShippingService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.RpcChannel channel;
+
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+
+      public  void getQuote(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.GetQuoteRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.GetQuoteResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.GetQuoteResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            proto.Demo.GetQuoteResponse.class,
+            proto.Demo.GetQuoteResponse.getDefaultInstance()));
+      }
+
+      public  void shipOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ShipOrderRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.ShipOrderResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(1),
+          controller,
+          request,
+          proto.Demo.ShipOrderResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            proto.Demo.ShipOrderResponse.class,
+            proto.Demo.ShipOrderResponse.getDefaultInstance()));
+      }
+    }
+
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+
+    public interface BlockingInterface {
+      public proto.Demo.GetQuoteResponse getQuote(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.GetQuoteRequest request)
+          throws com.google.protobuf.ServiceException;
+
+      public proto.Demo.ShipOrderResponse shipOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ShipOrderRequest request)
+          throws com.google.protobuf.ServiceException;
+    }
+
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.BlockingRpcChannel channel;
+
+      public proto.Demo.GetQuoteResponse getQuote(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.GetQuoteRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (proto.Demo.GetQuoteResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.GetQuoteResponse.getDefaultInstance());
+      }
+
+
+      public proto.Demo.ShipOrderResponse shipOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ShipOrderRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (proto.Demo.ShipOrderResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(1),
+          controller,
+          request,
+          proto.Demo.ShipOrderResponse.getDefaultInstance());
+      }
+
+    }
+
+    // @@protoc_insertion_point(class_scope:ShippingService)
+  }
+
+  /**
+   * Protobuf service {@code PaymentService}
+   */
+  public static abstract class PaymentService
+      implements com.google.protobuf.Service {
+    protected PaymentService() {}
+
+    public interface Interface {
+      /**
+       * <code>rpc Charge(.ChargeRequest) returns (.ChargeResponse);</code>
+       */
+      public abstract void charge(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ChargeRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.ChargeResponse> done);
+
+    }
+
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new PaymentService() {
+        @java.lang.Override
+        public  void charge(
+            com.google.protobuf.RpcController controller,
+            proto.Demo.ChargeRequest request,
+            com.google.protobuf.RpcCallback<proto.Demo.ChargeResponse> done) {
+          impl.charge(controller, request, done);
+        }
+
+      };
+    }
+
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.charge(controller, (proto.Demo.ChargeRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.ChargeRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.ChargeResponse.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+      };
+    }
+
+    /**
+     * <code>rpc Charge(.ChargeRequest) returns (.ChargeResponse);</code>
+     */
+    public abstract void charge(
+        com.google.protobuf.RpcController controller,
+        proto.Demo.ChargeRequest request,
+        com.google.protobuf.RpcCallback<proto.Demo.ChargeResponse> done);
+
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return proto.Demo.getDescriptor().getServices().get(3);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.charge(controller, (proto.Demo.ChargeRequest)request,
+            com.google.protobuf.RpcUtil.<proto.Demo.ChargeResponse>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.ChargeRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.ChargeResponse.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+
+    public static final class Stub extends proto.Demo.PaymentService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.RpcChannel channel;
+
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+
+      public  void charge(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ChargeRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.ChargeResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.ChargeResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            proto.Demo.ChargeResponse.class,
+            proto.Demo.ChargeResponse.getDefaultInstance()));
+      }
+    }
+
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+
+    public interface BlockingInterface {
+      public proto.Demo.ChargeResponse charge(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ChargeRequest request)
+          throws com.google.protobuf.ServiceException;
+    }
+
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.BlockingRpcChannel channel;
+
+      public proto.Demo.ChargeResponse charge(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.ChargeRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (proto.Demo.ChargeResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.ChargeResponse.getDefaultInstance());
+      }
+
+    }
+
+    // @@protoc_insertion_point(class_scope:PaymentService)
+  }
+
+  /**
+   * Protobuf service {@code CheckoutService}
+   */
+  public static abstract class CheckoutService
+      implements com.google.protobuf.Service {
+    protected CheckoutService() {}
+
+    public interface Interface {
+      /**
+       * <code>rpc PlaceOrder(.PlaceOrderRequest) returns (.PlaceOrderResponse);</code>
+       */
+      public abstract void placeOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.PlaceOrderRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.PlaceOrderResponse> done);
+
+    }
+
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new CheckoutService() {
+        @java.lang.Override
+        public  void placeOrder(
+            com.google.protobuf.RpcController controller,
+            proto.Demo.PlaceOrderRequest request,
+            com.google.protobuf.RpcCallback<proto.Demo.PlaceOrderResponse> done) {
+          impl.placeOrder(controller, request, done);
+        }
+
+      };
+    }
+
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.placeOrder(controller, (proto.Demo.PlaceOrderRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.PlaceOrderRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.PlaceOrderResponse.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+      };
+    }
+
+    /**
+     * <code>rpc PlaceOrder(.PlaceOrderRequest) returns (.PlaceOrderResponse);</code>
+     */
+    public abstract void placeOrder(
+        com.google.protobuf.RpcController controller,
+        proto.Demo.PlaceOrderRequest request,
+        com.google.protobuf.RpcCallback<proto.Demo.PlaceOrderResponse> done);
+
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return proto.Demo.getDescriptor().getServices().get(4);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.placeOrder(controller, (proto.Demo.PlaceOrderRequest)request,
+            com.google.protobuf.RpcUtil.<proto.Demo.PlaceOrderResponse>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.PlaceOrderRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.PlaceOrderResponse.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+
+    public static final class Stub extends proto.Demo.CheckoutService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.RpcChannel channel;
+
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+
+      public  void placeOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.PlaceOrderRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.PlaceOrderResponse> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.PlaceOrderResponse.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            proto.Demo.PlaceOrderResponse.class,
+            proto.Demo.PlaceOrderResponse.getDefaultInstance()));
+      }
+    }
+
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+
+    public interface BlockingInterface {
+      public proto.Demo.PlaceOrderResponse placeOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.PlaceOrderRequest request)
+          throws com.google.protobuf.ServiceException;
+    }
+
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.BlockingRpcChannel channel;
+
+      public proto.Demo.PlaceOrderResponse placeOrder(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.PlaceOrderRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (proto.Demo.PlaceOrderResponse) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.PlaceOrderResponse.getDefaultInstance());
+      }
+
+    }
+
+    // @@protoc_insertion_point(class_scope:CheckoutService)
+  }
+
+  /**
+   * Protobuf service {@code EmailService}
+   */
+  public static abstract class EmailService
+      implements com.google.protobuf.Service {
+    protected EmailService() {}
+
+    public interface Interface {
+      /**
+       * <code>rpc SendOrderConfirmation(.SendOrderConfirmationRequest) returns (.Empty);</code>
+       */
+      public abstract void sendOrderConfirmation(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.SendOrderConfirmationRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.Empty> done);
+
+    }
+
+    public static com.google.protobuf.Service newReflectiveService(
+        final Interface impl) {
+      return new EmailService() {
+        @java.lang.Override
+        public  void sendOrderConfirmation(
+            com.google.protobuf.RpcController controller,
+            proto.Demo.SendOrderConfirmationRequest request,
+            com.google.protobuf.RpcCallback<proto.Demo.Empty> done) {
+          impl.sendOrderConfirmation(controller, request, done);
+        }
+
+      };
+    }
+
+    public static com.google.protobuf.BlockingService
+        newReflectiveBlockingService(final BlockingInterface impl) {
+      return new com.google.protobuf.BlockingService() {
+        public final com.google.protobuf.Descriptors.ServiceDescriptor
+            getDescriptorForType() {
+          return getDescriptor();
+        }
+
+        public final com.google.protobuf.Message callBlockingMethod(
+            com.google.protobuf.Descriptors.MethodDescriptor method,
+            com.google.protobuf.RpcController controller,
+            com.google.protobuf.Message request)
+            throws com.google.protobuf.ServiceException {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.callBlockingMethod() given method descriptor for " +
+              "wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return impl.sendOrderConfirmation(controller, (proto.Demo.SendOrderConfirmationRequest)request);
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getRequestPrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getRequestPrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.SendOrderConfirmationRequest.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+        public final com.google.protobuf.Message
+            getResponsePrototype(
+            com.google.protobuf.Descriptors.MethodDescriptor method) {
+          if (method.getService() != getDescriptor()) {
+            throw new java.lang.IllegalArgumentException(
+              "Service.getResponsePrototype() given method " +
+              "descriptor for wrong service type.");
+          }
+          switch(method.getIndex()) {
+            case 0:
+              return proto.Demo.Empty.getDefaultInstance();
+            default:
+              throw new java.lang.AssertionError("Can't get here.");
+          }
+        }
+
+      };
+    }
+
+    /**
+     * <code>rpc SendOrderConfirmation(.SendOrderConfirmationRequest) returns (.Empty);</code>
+     */
+    public abstract void sendOrderConfirmation(
+        com.google.protobuf.RpcController controller,
+        proto.Demo.SendOrderConfirmationRequest request,
+        com.google.protobuf.RpcCallback<proto.Demo.Empty> done);
+
+    public static final
+        com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptor() {
+      return proto.Demo.getDescriptor().getServices().get(5);
+    }
+    public final com.google.protobuf.Descriptors.ServiceDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+
+    public final void callMethod(
+        com.google.protobuf.Descriptors.MethodDescriptor method,
+        com.google.protobuf.RpcController controller,
+        com.google.protobuf.Message request,
+        com.google.protobuf.RpcCallback<
+          com.google.protobuf.Message> done) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.callMethod() given method descriptor for wrong " +
+          "service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          this.sendOrderConfirmation(controller, (proto.Demo.SendOrderConfirmationRequest)request,
+            com.google.protobuf.RpcUtil.<proto.Demo.Empty>specializeCallback(
+              done));
+          return;
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getRequestPrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getRequestPrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.SendOrderConfirmationRequest.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public final com.google.protobuf.Message
+        getResponsePrototype(
+        com.google.protobuf.Descriptors.MethodDescriptor method) {
+      if (method.getService() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "Service.getResponsePrototype() given method " +
+          "descriptor for wrong service type.");
+      }
+      switch(method.getIndex()) {
+        case 0:
+          return proto.Demo.Empty.getDefaultInstance();
+        default:
+          throw new java.lang.AssertionError("Can't get here.");
+      }
+    }
+
+    public static Stub newStub(
+        com.google.protobuf.RpcChannel channel) {
+      return new Stub(channel);
+    }
+
+    public static final class Stub extends proto.Demo.EmailService implements Interface {
+      private Stub(com.google.protobuf.RpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.RpcChannel channel;
+
+      public com.google.protobuf.RpcChannel getChannel() {
+        return channel;
+      }
+
+      public  void sendOrderConfirmation(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.SendOrderConfirmationRequest request,
+          com.google.protobuf.RpcCallback<proto.Demo.Empty> done) {
+        channel.callMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.Empty.getDefaultInstance(),
+          com.google.protobuf.RpcUtil.generalizeCallback(
+            done,
+            proto.Demo.Empty.class,
+            proto.Demo.Empty.getDefaultInstance()));
+      }
+    }
+
+    public static BlockingInterface newBlockingStub(
+        com.google.protobuf.BlockingRpcChannel channel) {
+      return new BlockingStub(channel);
+    }
+
+    public interface BlockingInterface {
+      public proto.Demo.Empty sendOrderConfirmation(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.SendOrderConfirmationRequest request)
+          throws com.google.protobuf.ServiceException;
+    }
+
+    private static final class BlockingStub implements BlockingInterface {
+      private BlockingStub(com.google.protobuf.BlockingRpcChannel channel) {
+        this.channel = channel;
+      }
+
+      private final com.google.protobuf.BlockingRpcChannel channel;
+
+      public proto.Demo.Empty sendOrderConfirmation(
+          com.google.protobuf.RpcController controller,
+          proto.Demo.SendOrderConfirmationRequest request)
+          throws com.google.protobuf.ServiceException {
+        return (proto.Demo.Empty) channel.callBlockingMethod(
+          getDescriptor().getMethods().get(0),
+          controller,
+          request,
+          proto.Demo.Empty.getDefaultInstance());
+      }
+
+    }
+
+    // @@protoc_insertion_point(class_scope:EmailService)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Empty_descriptor;
   private static final 
@@ -11521,6 +23332,71 @@ public final class Demo {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Cart_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetQuoteRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetQuoteRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetQuoteResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetQuoteResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ShipOrderRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ShipOrderRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ShipOrderResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ShipOrderResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Address_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Address_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CreditCardInfo_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_CreditCardInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ChargeRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ChargeRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ChargeResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ChargeResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PlaceOrderRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PlaceOrderRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_PlaceOrderResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_PlaceOrderResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_OrderItem_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_OrderItem_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_OrderResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_OrderResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SendOrderConfirmationRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SendOrderConfirmationRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -11550,16 +23426,51 @@ public final class Demo {
       "m\"#\n\020EmptyCartRequest\022\017\n\007user_id\030\001 \001(\t\"!" +
       "\n\016GetCartRequest\022\017\n\007user_id\030\001 \001(\t\"1\n\004Car" +
       "t\022\017\n\007user_id\030\001 \001(\t\022\030\n\005items\030\002 \003(\0132\t.Cart" +
-      "Item2\377\001\n\025ProductCatalogService\022/\n\014ListPr" +
-      "oducts\022\006.Empty\032\025.ListProductsResponse\"\000\022" +
-      "7\n\nGetProduct\022\022.GetProductRequest\032\023.GetP" +
-      "roductResponse\"\000\022C\n\016SearchProducts\022\026.Sea" +
-      "rchProductsRequest\032\027.SearchProductsRespo" +
-      "nse\"\000\0227\n\nBuyProduct\022\022.BuyProductRequest\032" +
-      "\023.BuyProductResponse\"\0002\202\001\n\013CartService\022$" +
-      "\n\007AddItem\022\017.AddItemRequest\032\006.Empty\"\000\022#\n\007" +
-      "GetCart\022\017.GetCartRequest\032\005.Cart\"\000\022(\n\tEmp" +
-      "tyCart\022\021.EmptyCartRequest\032\006.Empty\"\000B\n\n\005p" +
+      "Item\"F\n\017GetQuoteRequest\022\031\n\007address\030\001 \001(\013" +
+      "2\010.Address\022\030\n\005items\030\002 \003(\0132\t.CartItem\"$\n\020" +
+      "GetQuoteResponse\022\020\n\010cost_usd\030\001 \001(\005\"G\n\020Sh" +
+      "ipOrderRequest\022\031\n\007address\030\001 \001(\0132\010.Addres" +
+      "s\022\030\n\005items\030\002 \003(\0132\t.CartItem\"(\n\021ShipOrder" +
+      "Response\022\023\n\013tracking_id\030\001 \001(\t\"a\n\007Address" +
+      "\022\026\n\016street_address\030\001 \001(\t\022\014\n\004city\030\002 \001(\t\022\r" +
+      "\n\005state\030\003 \001(\t\022\017\n\007country\030\004 \001(\t\022\020\n\010zip_co" +
+      "de\030\005 \001(\005\"\220\001\n\016CreditCardInfo\022\032\n\022credit_ca" +
+      "rd_number\030\001 \001(\t\022\027\n\017credit_card_cvv\030\002 \001(\005" +
+      "\022#\n\033credit_card_expiration_year\030\003 \001(\005\022$\n" +
+      "\034credit_card_expiration_month\030\004 \001(\005\"E\n\rC" +
+      "hargeRequest\022\016\n\006amount\030\001 \001(\005\022$\n\013credit_c" +
+      "ard\030\002 \001(\0132\017.CreditCardInfo\"(\n\016ChargeResp" +
+      "onse\022\026\n\016transaction_id\030\001 \001(\t\"\213\001\n\021PlaceOr" +
+      "derRequest\022\017\n\007user_id\030\001 \001(\t\022\025\n\ruser_curr" +
+      "ency\030\002 \001(\t\022\031\n\007address\030\003 \001(\0132\010.Address\022\r\n" +
+      "\005email\030\005 \001(\t\022$\n\013credit_card\030\006 \001(\0132\017.Cred" +
+      "itCardInfo\"1\n\022PlaceOrderResponse\022\033\n\005orde" +
+      "r\030\001 \001(\0132\014.OrderResult\"2\n\tOrderItem\022\027\n\004it" +
+      "em\030\001 \001(\0132\t.CartItem\022\014\n\004cost\030\002 \001(\005\"\223\001\n\013Or" +
+      "derResult\022\020\n\010order_id\030\001 \001(\t\022\034\n\024shipping_" +
+      "tracking_id\030\002 \001(\t\022\025\n\rshipping_cost\030\003 \001(\005" +
+      "\022\"\n\020shipping_address\030\004 \001(\0132\010.Address\022\031\n\005" +
+      "items\030\005 \003(\0132\n.OrderItem\"J\n\034SendOrderConf" +
+      "irmationRequest\022\r\n\005email\030\001 \001(\t\022\033\n\005order\030" +
+      "\002 \001(\0132\014.OrderResult2\377\001\n\025ProductCatalogSe" +
+      "rvice\022/\n\014ListProducts\022\006.Empty\032\025.ListProd" +
+      "uctsResponse\"\000\0227\n\nGetProduct\022\022.GetProduc" +
+      "tRequest\032\023.GetProductResponse\"\000\022C\n\016Searc" +
+      "hProducts\022\026.SearchProductsRequest\032\027.Sear" +
+      "chProductsResponse\"\000\0227\n\nBuyProduct\022\022.Buy" +
+      "ProductRequest\032\023.BuyProductResponse\"\0002\202\001" +
+      "\n\013CartService\022$\n\007AddItem\022\017.AddItemReques" +
+      "t\032\006.Empty\"\000\022#\n\007GetCart\022\017.GetCartRequest\032" +
+      "\005.Cart\"\000\022(\n\tEmptyCart\022\021.EmptyCartRequest" +
+      "\032\006.Empty\"\0002z\n\017ShippingService\0221\n\010GetQuot" +
+      "e\022\020.GetQuoteRequest\032\021.GetQuoteResponse\"\000" +
+      "\0224\n\tShipOrder\022\021.ShipOrderRequest\032\022.ShipO" +
+      "rderResponse\"\0002=\n\016PaymentService\022+\n\006Char" +
+      "ge\022\016.ChargeRequest\032\017.ChargeResponse\"\0002J\n" +
+      "\017CheckoutService\0227\n\nPlaceOrder\022\022.PlaceOr" +
+      "derRequest\032\023.PlaceOrderResponse\"\0002P\n\014Ema" +
+      "ilService\022@\n\025SendOrderConfirmation\022\035.Sen" +
+      "dOrderConfirmationRequest\032\006.Empty\"\000B\n\n\005p" +
       "roto\210\001\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
@@ -11656,6 +23567,84 @@ public final class Demo {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Cart_descriptor,
         new java.lang.String[] { "UserId", "Items", });
+    internal_static_GetQuoteRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_GetQuoteRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetQuoteRequest_descriptor,
+        new java.lang.String[] { "Address", "Items", });
+    internal_static_GetQuoteResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_GetQuoteResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetQuoteResponse_descriptor,
+        new java.lang.String[] { "CostUsd", });
+    internal_static_ShipOrderRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_ShipOrderRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ShipOrderRequest_descriptor,
+        new java.lang.String[] { "Address", "Items", });
+    internal_static_ShipOrderResponse_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_ShipOrderResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ShipOrderResponse_descriptor,
+        new java.lang.String[] { "TrackingId", });
+    internal_static_Address_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_Address_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Address_descriptor,
+        new java.lang.String[] { "StreetAddress", "City", "State", "Country", "ZipCode", });
+    internal_static_CreditCardInfo_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_CreditCardInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_CreditCardInfo_descriptor,
+        new java.lang.String[] { "CreditCardNumber", "CreditCardCvv", "CreditCardExpirationYear", "CreditCardExpirationMonth", });
+    internal_static_ChargeRequest_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_ChargeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ChargeRequest_descriptor,
+        new java.lang.String[] { "Amount", "CreditCard", });
+    internal_static_ChargeResponse_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_ChargeResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ChargeResponse_descriptor,
+        new java.lang.String[] { "TransactionId", });
+    internal_static_PlaceOrderRequest_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_PlaceOrderRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PlaceOrderRequest_descriptor,
+        new java.lang.String[] { "UserId", "UserCurrency", "Address", "Email", "CreditCard", });
+    internal_static_PlaceOrderResponse_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_PlaceOrderResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_PlaceOrderResponse_descriptor,
+        new java.lang.String[] { "Order", });
+    internal_static_OrderItem_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_OrderItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_OrderItem_descriptor,
+        new java.lang.String[] { "Item", "Cost", });
+    internal_static_OrderResult_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_OrderResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_OrderResult_descriptor,
+        new java.lang.String[] { "OrderId", "ShippingTrackingId", "ShippingCost", "ShippingAddress", "Items", });
+    internal_static_SendOrderConfirmationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_SendOrderConfirmationRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SendOrderConfirmationRequest_descriptor,
+        new java.lang.String[] { "Email", "Order", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
