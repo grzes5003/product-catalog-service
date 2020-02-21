@@ -45,7 +45,7 @@ public class DatabaseCommunicator implements DatabaseCommunicatorInterface {
         do {
             product = set2product(resultSet);
             listOfProducts.add(product);
-        } while (product != null);
+        } while (!product.getId().equals(notFoundProduct().getId()));
         return listOfProducts;
     }
 
@@ -78,7 +78,15 @@ public class DatabaseCommunicator implements DatabaseCommunicatorInterface {
                     .build();
         }
         logger.info("product not found");
-        return null;
+        return notFoundProduct();
+    }
+
+    private Demo.Product notFoundProduct() {
+        return Demo.Product.newBuilder()
+                .setId("-1")
+                .setName("null")
+                .setDescription("Product not found")
+                .build();
     }
 
 

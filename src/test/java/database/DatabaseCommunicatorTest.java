@@ -21,7 +21,7 @@ class DatabaseCommunicatorTest {
     @Test
     void getProductByIDtest() throws SQLException {
         assertNotNull(databaseCommunicator.getProductByID(123456));
-        assertNull(databaseCommunicator.getProductByID(5234545));
+        assertEquals(databaseCommunicator.getProductByID(5234545).getId(), "-1");
     }
 
     @DisplayName("getSearchProductTest")
@@ -36,7 +36,7 @@ class DatabaseCommunicatorTest {
                 .setQuery("costam")
                 .build();
         assertEquals(databaseCommunicator.getSearchProduct(searchProductsRequest1).get(0).getId(), "123456");
-        assertNull(databaseCommunicator.getSearchProduct(searchProductsRequest2).get(0));
+        assertEquals(databaseCommunicator.getSearchProduct(searchProductsRequest2).get(0).getId(), "-1");
 
     }
 
