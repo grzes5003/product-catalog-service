@@ -57,6 +57,20 @@ public class DatabaseCommunicator implements DatabaseCommunicatorInterface {
         return set2product(resultSet);
     }
 
+    @Override
+    public List<Demo.Product> listProducts() throws SQLException {
+        List<Demo.Product> listOfProducts = new ArrayList<>();
+        Demo.Product product;
+        resultSet = connection
+                .prepareStatement("SELECT * FROM products")
+                .executeQuery();
+        do {
+            product = set2product(resultSet);
+            listOfProducts.add(product);
+        } while (!product.getId().equals(notFoundProduct().getId()));
+        return listOfProducts;
+    }
+
     public Demo.Product set2product(ResultSet resultSet) throws SQLException {
         Demo.Product product = null;
         if (resultSet.next()) {

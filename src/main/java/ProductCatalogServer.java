@@ -83,7 +83,18 @@ public class ProductCatalogServer {
 
         @Override
         public void listProducts(Demo.Empty request, StreamObserver<Demo.ListProductsResponse> responseObserver) {
-            super.listProducts(request, responseObserver);
+            //super.listProducts(request, responseObserver);
+            try {
+                List<Demo.Product> productList = databaseCommunicator.listProducts();
+                Demo.ListProductsResponse listProductsResponse = Demo.ListProductsResponse
+                        .newBuilder()
+                        .addAllProducts(productList)
+                        .build();
+                responseObserver.onNext(listProductsResponse);
+                responseObserver.onCompleted();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
